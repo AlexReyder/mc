@@ -1,0 +1,281 @@
+.palette {
+	display: grid;
+	grid-template-columns: 30px 310px 60px;
+	align-items: center;
+}
+
+.palette__container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.palette__content {
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.palette__name {
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+}
+
+.palette__img {
+	width: 70px;
+	height: 50px;
+}
+
+.palette__btn {
+	border: none;
+	background-color: transparent;
+}
+
+.palette__wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.palette__add {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: 3px solid var(--color-primary);
+	padding: 1rem 3rem;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.palette__add:hover {
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+.palette__trash {
+	margin-left: auto;
+}
+
+.modal {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 3000;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal__content {
+	background-color: #fff;
+	padding: 0 3rem;
+	width: 90%;
+	height: 95%;
+	overflow-y: scroll;
+}
+
+.modal--active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal__heading {
+	font-size: 36px;
+	font-weight: 400;
+	text-align: center;
+	color: #000;
+}
+
+.modal__title {
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+	/* display: none; */
+}
+
+.modal__input {
+	border: none;
+	background-color: #f2f0f0;
+	padding: 1rem 3rem;
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+}
+
+.modal__main {
+}
+
+.modal__box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.modal__box--1 {
+	width: 120px;
+	height: 120px;
+	grid-column: 1/2;
+	grid-row: 1/3;
+}
+
+.modal__box--miniature {
+	/* flex-direction: row; */
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	grid-template-columns: 70px 1fr;
+	column-gap: 20px;
+}
+
+.modal__box--miniature p {
+	grid-column: 1 / end;
+	grid-row: 1/2;
+}
+
+.modal__paper {
+	background-color: #f2f0f0;
+	flex-basis: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 120px;
+	height: 120px;
+	/* margin-top: 4rem; */
+}
+
+.modal__paper--miniature {
+	flex-basis: 70px;
+	width: 70px;
+	height: 50px;
+}
+
+.modal__upload {
+	background-color: #f2f0f0;
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.modal__icon-upload {
+	width: 48px !important;
+	height: 48px !important;
+	fill: var(--color-primary) !important;
+}
+
+.modal__icon-error {
+	width: 48px !important;
+	height: 48px !important;
+	fill: red !important;
+}
+
+.alert {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.cropper {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cropper__content {
+	background-color: #fff;
+	padding: 0;
+	max-width: 95%;
+	max-height: 95%;
+	/* height: 90%; */
+	/* width: fit-content; */
+	/* height: fit-content; */
+	overflow-y: auto;
+}
+
+.cropper__btn-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.previewer {
+	border: none;
+	background-color: #222;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.previewer__icon {
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	fill: #fff !important;
+}
+.product-image {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	& > img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+	}
+}
+
+.product-images {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+	margin: 5rem 0 7rem 0;
+}
+
+.product-delete-image {
+	position: absolute;
+	top: -1rem;
+	right: -1rem;
+	border: none;
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.product-colors {
+	margin-top: 2rem;
+}
+
+.palette_controls {
+	display: flex;
+	align-items: center;
+}

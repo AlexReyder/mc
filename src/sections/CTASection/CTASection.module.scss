@@ -1,0 +1,85 @@
+.CTA {
+	background-color: var(--color-bg-b);
+}
+
+.Container {
+	display: flex;
+	align-items: flex-start;
+	gap: 8rem;
+	@media only screen and (max-width: 56.25rem) {
+		flex-direction: column;
+		gap: 4rem;
+	}
+}
+
+.Left {
+	@media only screen and (max-width: 56.25rem) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.Subheading {
+	font-size: var(--font-size-l);
+	font-weight: 500;
+	color: var(--color-text-white);
+}
+
+.Heading {
+	width: 100%;
+
+	& > h2 {
+		width: 100%;
+	}
+}
+
+.Wrapper {
+	display: flex;
+	align-items: flex-start;
+	gap: 8rem;
+	@media only screen and (max-width: 56.25rem) {
+		flex-direction: column;
+		gap: 4rem;
+	}
+}
+.PhoneContainer {
+	display: contents;
+}
+
+.ModalInput {
+	width: 100%;
+	background: none;
+	border-radius: 0;
+	border: none;
+	border-bottom: solid 1px rgba(241, 239, 229, 0.251);
+	padding-top: calc(16 * var(--unitInput));
+	padding-bottom: calc(16 * var(--unitInput));
+	font-size: calc(21 * var(--unitInput));
+	margin-bottom: calc(28 * var(--unitInput));
+	padding-left: 0;
+	color: #f1efe5;
+	transition: all 0.3s;
+
+	&:focus {
+		outline: none;
+		border: none;
+		border-bottom: solid 1px #fff;
+	}
+}
+
+.Label {
+	font-size: var(--font-size-text);
+	color: var(--color-text-white);
+}
+
+.Submit {
+	margin-top: 2rem;
+	@media only screen and (max-width: 56.25rem) {
+		margin-bottom: 2rem;
+	}
+}
+
+.Right,
+.Form {
+	width: 100%;
+}

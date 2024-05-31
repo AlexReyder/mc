@@ -1,0 +1,38 @@
+.Wrapper {
+	background-color: #fff;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 0px 0px;
+	// padding: 0 5px;
+}
+
+.Item {
+	aspect-ratio: 1/1;
+	min-width: calc(100% / 4);
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	position: relative;
+}
+
+.Title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #000;
+	text-align: left;
+	width: 100%;
+}
+
+.Bold {
+	font-weight: 600;
+}

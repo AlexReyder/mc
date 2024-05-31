@@ -1,0 +1,11 @@
+.download-price {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	background-color: #222;
+	color: #fff;
+	padding: 1rem 2rem;
+	width: fit-content;
+}

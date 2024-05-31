@@ -1,0 +1,101 @@
+.Footer {
+	background-color: var(--color-bg-b);
+	position: relative;
+}
+
+.Wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: start;
+	gap: 6rem 3rem;
+	position: relative;
+	z-index: 5;
+	grid-template-areas:
+		'entity-1 entity-2 entity-3'
+		'entity-4 entity-4 entity-4'
+		'entity-5 entity-5 entity-5'
+		'entity-6 entity-6 entity-6';
+	@media only screen and (max-width: 47rem) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			'entity-1 entity-2'
+			'entity-3 entity-3'
+			'entity-4 entity-4'
+			'entity-5 entity-5'
+			'entity-6 entity-6';
+	}
+	@media only screen and (max-width: 28rem) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'entity-1'
+			'entity-2'
+			'entity-3'
+			'entity-4'
+			'entity-5'
+			'entity-6';
+	}
+}
+
+.Title {
+	font-size: var(--font-size-text);
+	color: var(--color-text-grey);
+	margin-bottom: 1rem;
+}
+.Messanger {
+	// display: block;
+	font-size: var(--font-size-l);
+	color: var(--color-text-white);
+
+	&:not(:last-child) {
+		margin-right: 2.5rem;
+	}
+}
+
+.Address {
+	font-size: var(--font-size-l);
+	color: var(--color-text-white);
+}
+
+.Business {
+	display: block;
+	font-size: var(--font-size-l);
+	color: var(--color-text-white);
+}
+
+.Email {
+	&,
+	&:link,
+	&:visited {
+		font-size: var(--font-size-l);
+		color: var(--color-text-white);
+	}
+}
+
+.Copyright {
+	font-size: var(--font-size-small);
+	color: var(--color-text-grey);
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.Entity_1 {
+	grid-area: entity-1;
+}
+.Entity_2 {
+	grid-area: entity-2;
+}
+.Entity_3 {
+	grid-area: entity-3;
+}
+.Entity_4 {
+	grid-area: entity-4;
+}
+.Entity_5 {
+	grid-area: entity-5;
+}
+
+.Top {
+	position: absolute;
+	bottom: 2rem;
+	right: 7rem;
+}

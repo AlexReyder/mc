@@ -1,0 +1,11 @@
+.Map {
+	padding: 0 7rem !important;
+
+	@media only screen and (max-width: 37.5rem) {
+		padding: 0 !important;
+	}
+
+	& > iframe {
+		border-radius: 10px;
+	}
+}

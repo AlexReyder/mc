@@ -1,0 +1,23 @@
+.PrivacyArticle {
+	margin-top: 10rem;
+}
+.Title {
+	margin: 1rem 0;
+}
+
+.Description {
+	margin: 2rem 0;
+}
+
+.Bullets {
+	list-style: disc;
+
+	& > li {
+		margin-bottom: 1rem;
+	}
+}
+
+.Numbers {
+	list-style: decimal;
+	padding-left: 2rem;
+}

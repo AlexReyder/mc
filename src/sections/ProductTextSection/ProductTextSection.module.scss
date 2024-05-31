@@ -1,0 +1,22 @@
+.Section {
+	background-color: #000;
+}
+.paragraph {
+	display: flex;
+	font-size: 32px;
+	line-height: 1;
+	padding: 40px;
+	max-width: 1280px;
+	color: white;
+	flex-wrap: wrap;
+	text-align: center;
+	.word {
+		position: relative;
+		margin-right: 12px;
+		margin-top: 12px;
+		.shadow {
+			position: absolute;
+			opacity: 20%;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.SliderButton {
+    border: none;
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 1.5rem 3rem;
+    border-radius: 24px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 2rem) {
+        padding: 1rem 3rem;
+    }
+}
+
+.Active {
+    border: none;
+    background-color: var(--color-primary);
+}

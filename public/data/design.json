@@ -1,0 +1,720 @@
+[
+	{
+		"id": "1",
+		"name": "Базовый",
+		"house": {
+			"jpg": "Клинкер/1,Базовый/Базовый.jpg",
+			"webp": "Клинкер/1,Базовый/Базовый.webp"
+		},
+		"variants": [
+			"Клинкер/1,Базовый/aside/1.jpg",
+			"Клинкер/1,Базовый/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/1,Базовый/aside/1 preview.jpg",
+				"webp": "Клинкер/1,Базовый/aside/2 preview.jpg"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/1,Базовый/palette/Базовый.png",
+			"webp": "Клинкер/1,Базовый/palette/Базовый.webp"
+		}
+	},
+	{
+		"id": 2,
+		"name": "СТ-01",
+		"house": {
+			"jpg": "Клинкер/2,СТ-01/СТ-01.jpg?1700771354",
+			"webp": "Клинкер/2,СТ-01/СТ-01.webp"
+		},
+		"variants": [
+			["Клинкер/2,СТ-01/aside/1.jpg"],
+			["Клинкер/2,СТ-01/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/2,СТ-01/aside/1 preview.jpg?1700771369",
+				"webp": "Клинкер/2,СТ-01/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/2,СТ-01/aside/2 preview.jpg?1700771381",
+				"webp": "Клинкер/2,СТ-01/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/2,СТ-01/palette/palette-1.png?1700771371",
+			"webp": "Клинкер/2,СТ-01/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 3,
+		"name": "СТ-02",
+		"house": {
+			"jpg": "Клинкер/3,СТ-02/СТ-02.jpg?1693454684",
+			"webp": "Клинкер/3,СТ-02/СТ-02.webp"
+		},
+		"variants": [
+			["Клинкер/3,СТ-02/aside/1.jpg"],
+			["Клинкер/3,СТ-02/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/3,СТ-02/aside/1 preview.jpg?1693454892",
+				"webp": "Клинкер/3,СТ-02/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/3,СТ-02/aside/2 preview.jpg?1693454904",
+				"webp": "Клинкер/3,СТ-02/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/3,СТ-02/palette/palette-1.png?1693454895",
+			"webp": "Клинкер/3,СТ-02/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 4,
+		"name": "СТ-03",
+		"house": {
+			"jpg": "Клинкер/4,СТ-03/СТ-03.jpg?1700771255",
+			"webp": "Клинкер/4,СТ-03/СТ-03.webp"
+		},
+		"variants": [
+			["Клинкер/4,СТ-03/aside/1.jpg"],
+			["Клинкер/4,СТ-03/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/4,СТ-03/aside/1 preview.jpg?1700771270",
+				"webp": "Клинкер/4,СТ-03/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/4,СТ-03/aside/2 preview.jpg?1700771285",
+				"webp": "Клинкер/4,СТ-03/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/4,СТ-03/palette/palette-1.png?1700771272",
+			"webp": "Клинкер/4,СТ-03/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 5,
+		"name": "СТ-04",
+		"house": {
+			"jpg": "Клинкер/5,СТ-04/СТ-04.jpg",
+			"webp": "Клинкер/5,СТ-04/СТ-04.webp"
+		},
+		"variants": ["Клинкер/5,СТ-04/aside/1.jpg", "Клинкер/5,СТ-04/aside/2.jpg"],
+		"previews": [
+			{
+				"jpg": "Клинкер/5,СТ-04/aside/1 preview.jpg",
+				"webp": "Клинкер/5,СТ-04/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/5,СТ-04/aside/2 preview.jpg",
+				"webp": "Клинкер/5,СТ-04/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/5,СТ-04/palette/СТ-04.png",
+			"webp": "Клинкер/5,СТ-04/palette/СТ-04.webp"
+		}
+	},
+	{
+		"id": 6,
+		"name": "СТ-05",
+		"house": {
+			"jpg": "Клинкер/6,СТ-05/СТ-05.jpg?1700771408",
+			"webp": "Клинкер/6,СТ-05/СТ-05.webp"
+		},
+		"variants": [
+			["Клинкер/6,СТ-05/aside/1.jpg"],
+			["Клинкер/6,СТ-05/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/6,СТ-05/aside/1 preview.jpg?1700771422",
+				"webp": "Клинкер/6,СТ-05/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/6,СТ-05/aside/2 preview.jpg?1700771433",
+				"webp": "Клинкер/6,СТ-05/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/6,СТ-05/palette/palette-1.png?1700771423",
+			"webp": "Клинкер/6,СТ-05/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 7,
+		"name": "СТ-06",
+		"house": {
+			"jpg": "Клинкер/7,СТ-06/СТ-06.jpg?1700771463",
+			"webp": "Клинкер/7,СТ-06/СТ-06.webp"
+		},
+		"variants": [
+			["Клинкер/7,СТ-06/aside/1.jpg"],
+			["Клинкер/7,СТ-06/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/7,СТ-06/aside/1 preview.jpg?1700771479",
+				"webp": "Клинкер/7,СТ-06/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/7,СТ-06/aside/2 preview.jpg?1700771492",
+				"webp": "Клинкер/7,СТ-06/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/7,СТ-06/palette/palette-1.png?1700771480",
+			"webp": "Клинкер/7,СТ-06/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 8,
+		"name": "СТ-07",
+		"house": {
+			"jpg": "Клинкер/8,СТ-07/СТ-07.jpg?1700771523",
+			"webp": "Клинкер/8,СТ-07/СТ-07.webp"
+		},
+		"variants": [
+			["Клинкер/8,СТ-07/aside/1.jpg"],
+			["Клинкер/8,СТ-07/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/8,СТ-07/aside/1 preview.jpg?1700771538",
+				"webp": "Клинкер/8,СТ-07/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/8,СТ-07/aside/2 preview.jpg?1700771553",
+				"webp": "Клинкер/8,СТ-07/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/8,СТ-07/palette/palette-1.png?1700771541",
+			"webp": "Клинкер/8,СТ-07/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 9,
+		"name": "СТ-08",
+		"house": {
+			"jpg": "Клинкер/9,СТ-08/СТ-08.jpg",
+			"webp": "Клинкер/9,СТ-08/СТ-08.webp"
+		},
+		"variants": ["Клинкер/9,СТ-08/aside/1.jpg", "Клинкер/9,СТ-08/aside/2.jpg"],
+		"previews": [
+			{
+				"jpg": "Клинкер/9,СТ-08/aside/1 preview.jpg",
+				"webp": "Клинкер/9,СТ-08/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/9,СТ-08/aside/2 preview.jpg",
+				"webp": "Клинкер/9,СТ-08/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/9,СТ-08/palette/СТ-08.png",
+			"webp": "Клинкер/9,СТ-08/palette/СТ-08.webp"
+		}
+	},
+	{
+		"id": 10,
+		"name": "СТ-09",
+		"house": {
+			"jpg": "Клинкер/10,СТ-09/СТ-09.jpg?1700771585",
+			"webp": "Клинкер/10,СТ-09/СТ-09.webp"
+		},
+		"variants": [
+			["Клинкер/10,СТ-09/aside/1.jpg"],
+			["Клинкер/10,СТ-09/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/10,СТ-09/aside/1 preview.jpg?1700771600",
+				"webp": "Клинкер/10,СТ-09/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/10,СТ-09/aside/2 preview.jpg?1700771612",
+				"webp": "Клинкер/10,СТ-09/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/10,СТ-09/palette/palette-1.png?1700771601",
+			"webp": "Клинкер/10,СТ-09/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 11,
+		"name": "СТ-10",
+		"house": {
+			"jpg": "Клинкер/11,СТ-10/СТ-10.jpg?1693454273",
+			"webp": "Клинкер/11,СТ-10/СТ-10.webp"
+		},
+		"variants": [
+			["Клинкер/11,СТ-10/aside/1.jpg"],
+			["Клинкер/11,СТ-10/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/11,СТ-10/aside/1 preview.jpg?1693454512",
+				"webp": "Клинкер/11,СТ-10/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/11,СТ-10/aside/2 preview.jpg?1693454526",
+				"webp": "Клинкер/11,СТ-10/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/11,СТ-10/palette/palette-1.png?1693454514",
+			"webp": "Клинкер/11,СТ-10/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 12,
+		"name": "СТ-14",
+		"house": {
+			"jpg": "Клинкер/12,СТ-14/СТ-14.jpg?1693647326",
+			"webp": "Клинкер/12,СТ-14/СТ-14.webp"
+		},
+		"variants": [
+			["Клинкер/12,СТ-14/aside/1.jpg"],
+			["Клинкер/12,СТ-14/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/12,СТ-14/aside/1 preview.jpg?1693647333",
+				"webp": "Клинкер/12,СТ-14/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/12,СТ-14/aside/2 preview.jpg?1693647341",
+				"webp": "Клинкер/12,СТ-14/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/12,СТ-14/palette/palette-1.png?1693647335",
+			"webp": "Клинкер/12,СТ-14/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 13,
+		"name": "СТ-16",
+		"house": {
+			"jpg": "Клинкер/13,СТ-16/СТ-16.jpg?1705485176",
+			"webp": "Клинкер/13,СТ-16/СТ-16.webp"
+		},
+		"variants": [
+			["Клинкер/13,СТ-16/aside/1.jpg"],
+			["Клинкер/13,СТ-16/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/13,СТ-16/aside/1 preview.jpg?1705485200",
+				"webp": "Клинкер/13,СТ-16/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/13,СТ-16/aside/2 preview.jpg?1705485225",
+				"webp": "Клинкер/13,СТ-16/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/13,СТ-16/palette/palette-1.png?1705485202",
+			"webp": "Клинкер/13,СТ-16/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 14,
+		"name": "СТ-17",
+		"house": {
+			"jpg": "Клинкер/14,СТ-17/СТ-17.jpg?1693647379",
+			"webp": "Клинкер/14,СТ-17/СТ-17.webp"
+		},
+		"variants": [
+			["Клинкер/14,СТ-17/aside/1.jpg"],
+			["Клинкер/14,СТ-17/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/14,СТ-17/aside/1 preview.jpg?1693647388",
+				"webp": "Клинкер/14,СТ-17/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/14,СТ-17/aside/2 preview.jpg?1693647398",
+				"webp": "Клинкер/14,СТ-17/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/14,СТ-17/palette/palette-1.png?1693647392",
+			"webp": "Клинкер/14,СТ-17/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 15,
+		"name": "СТ-18",
+		"house": {
+			"jpg": "Клинкер/15,СТ-18/СТ-18.jpg",
+			"webp": "Клинкер/15,СТ-18/СТ-18.webp"
+		},
+		"variants": [
+			"Клинкер/15,СТ-18/aside/1.jpg",
+			"Клинкер/15,СТ-18/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/15,СТ-18/aside/1 preview.jpg",
+				"webp": "Клинкер/15,СТ-18/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/15,СТ-18/aside/2 preview.jpg",
+				"webp": "Клинкер/15,СТ-18/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/15,СТ-18/palette/СТ-18.png",
+			"webp": "Клинкер/15,СТ-18/palette/СТ-18.webp"
+		}
+	},
+	{
+		"id": 16,
+		"name": "СТ-19",
+		"house": {
+			"jpg": "Клинкер/16,СТ-19/СТ-19.jpg?1700771644",
+			"webp": "Клинкер/16,СТ-19/СТ-19.webp"
+		},
+		"variants": [
+			["Клинкер/16,СТ-19/aside/1.jpg"],
+			["Клинкер/16,СТ-19/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/16,СТ-19/aside/1 preview.jpg?1700771657",
+				"webp": "Клинкер/16,СТ-19/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/16,СТ-19/aside/2 preview.jpg?1700771669",
+				"webp": "Клинкер/16,СТ-19/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/16,СТ-19/palette/palette-1.png?1700771658",
+			"webp": "Клинкер/16,СТ-19/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 17,
+		"name": "СТ-21",
+		"house": {
+			"jpg": "Клинкер/17,СТ-21/СТ-21.jpg?1703963203",
+			"webp": "Клинкер/17,СТ-21/СТ-21.webp"
+		},
+		"variants": [
+			["Клинкер/17,СТ-21/aside/1.jpg"],
+			["Клинкер/17,СТ-21/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/17,СТ-21/aside/1 preview.jpg?1703963215",
+				"webp": "Клинкер/17,СТ-21/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/17,СТ-21/aside/2 preview.jpg?1703963225",
+				"webp": "Клинкер/17,СТ-21/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/17,СТ-21/palette/palette-1.png?1703963217",
+			"webp": "Клинкер/17,СТ-21/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 18,
+		"name": "СТ-22",
+		"house": {
+			"jpg": "Клинкер/18,СТ-22/СТ-22.jpg",
+			"webp": "Клинкер/18,СТ-22/СТ-22.webp"
+		},
+		"variants": [
+			"Клинкер/18,СТ-22/aside/1.jpg",
+			"Клинкер/18,СТ-22/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/18,СТ-22/aside/1 preview.jpg",
+				"webp": "Клинкер/18,СТ-22/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/18,СТ-22/aside/2 preview.jpg",
+				"webp": "Клинкер/18,СТ-22/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/18,СТ-22/palette/СТ-22.png",
+			"webp": "Клинкер/18,СТ-22/palette/СТ-22.webp"
+		}
+	},
+	{
+		"id": 19,
+		"name": "СТ-40",
+		"house": {
+			"jpg": "Клинкер/19,СТ-40/СТ-40.jpg?1693647490",
+			"webp": "Клинкер/19,СТ-40/СТ-40.webp"
+		},
+		"variants": [
+			["Клинкер/19,СТ-40/aside/1.jpg"],
+			["Клинкер/19,СТ-40/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/19,СТ-40/aside/1 preview.jpg?1693647499",
+				"webp": "Клинкер/19,СТ-40/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/19,СТ-40/aside/2 preview.jpg?1693647508",
+				"webp": "Клинкер/19,СТ-40/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/19,СТ-40/palette/palette-1.png?1693647501",
+			"webp": "Клинкер/19,СТ-40/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 20,
+		"name": "СТ-53",
+		"house": {
+			"jpg": "Клинкер/20,СТ-53/СТ-53.jpg",
+			"webp": "Клинкер/20,СТ-53/СТ-53.webp"
+		},
+		"variants": [
+			"Клинкер/20,СТ-53/aside/1.jpg",
+			"Клинкер/20,СТ-53/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/20,СТ-53/aside/1 preview.jpg",
+				"webp": "Клинкер/20,СТ-53/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/20,СТ-53/aside/2 preview.jpg",
+				"webp": "Клинкер/20,СТ-53/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/20,СТ-53/palette/СТ-53.png",
+			"webp": "Клинкер/20,СТ-53/palette/СТ-53.webp"
+		}
+	},
+	{
+		"id": 21,
+		"name": "СТ-51",
+		"house": {
+			"jpg": "Клинкер/21,СТ-51/СТ-51.jpg",
+			"webp": "Клинкер/21,СТ-51/СТ-51.webp"
+		},
+		"variants": [
+			"Клинкер/21,СТ-51/aside/1.jpg",
+			"Клинкер/21,СТ-51/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/21,СТ-51/aside/1 preview.jpg",
+				"webp": "Клинкер/21,СТ-51/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/21,СТ-51/aside/2 preview.jpg",
+				"webp": "Клинкер/21,СТ-51/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/21,СТ-51/palette/СТ-51.png",
+			"webp": "Клинкер/21,СТ-51/palette/СТ-51.webp"
+		}
+	},
+	{
+		"id": 22,
+		"name": "СТ-ФН-04",
+		"house": {
+			"jpg": "Клинкер/22,СТ-ФН-04/СТ-ФН-04.jpg?1700771706",
+			"webp": "Клинкер/22,СТ-ФН-04/СТ-ФН-04.webp"
+		},
+		"variants": [
+			["Клинкер/22,СТ-ФН-04/aside/1.jpg"],
+			["Клинкер/22,СТ-ФН-04/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/22,СТ-ФН-04/aside/1 preview.jpg?1700771721",
+				"webp": "Клинкер/22,СТ-ФН-04/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/22,СТ-ФН-04/aside/2 preview.jpg?1700771734",
+				"webp": "Клинкер/22,СТ-ФН-04/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/22,СТ-ФН-04/palette/palette-1.png?1700771723",
+			"webp": "Клинкер/22,СТ-ФН-04/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 23,
+		"name": "СТ-ФН-07",
+		"house": {
+			"jpg": "Клинкер/23,СТ-ФН-07/СТ-ФН-07.jpg?1693647543",
+			"webp": "Клинкер/23,СТ-ФН-07/СТ-ФН-07.webp"
+		},
+		"variants": [
+			["Клинкер/23,СТ-ФН-07/aside/1.jpg"],
+			["Клинкер/23,СТ-ФН-07/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/23,СТ-ФН-07/aside/1 preview.jpg?1693647554",
+				"webp": "Клинкер/23,СТ-ФН-07/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/23,СТ-ФН-07/aside/2 preview.jpg?1693647564",
+				"webp": "Клинкер/23,СТ-ФН-07/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/23,СТ-ФН-07/palette/palette-1.png?1693647557",
+			"webp": "Клинкер/23,СТ-ФН-07/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 24,
+		"name": "СТ-ФН-12",
+		"house": {
+			"jpg": "Клинкер/24,СТ-ФН-12/СТ-ФН-12.jpg",
+			"webp": "Клинкер/24,СТ-ФН-12/СТ-ФН-12.webp"
+		},
+		"variants": [
+			"Клинкер/24,СТ-ФН-12/aside/1.jpg",
+			"Клинкер/24,СТ-ФН-12/aside/2.jpg"
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/24,СТ-ФН-12/aside/1 preview.jpg",
+				"webp": "Клинкер/24,СТ-ФН-12/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/24,СТ-ФН-12/aside/2 preview.jpg",
+				"webp": "Клинкер/24,СТ-ФН-12/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/24,СТ-ФН-12/palette/СТ-ФН-12.png",
+			"webp": "Клинкер/24,СТ-ФН-12/palette/СТ-ФН-12.webp"
+		}
+	},
+	{
+		"id": 25,
+		"name": "СТ-ФН-14",
+		"house": {
+			"jpg": "Клинкер/25,СТ-ФН-14/СТ-ФН-14.jpg?1693648274",
+			"webp": "Клинкер/25,СТ-ФН-14/СТ-ФН-14.webp"
+		},
+		"variants": [
+			["Клинкер/25,СТ-ФН-14/aside/1.jpg"],
+			["Клинкер/25,СТ-ФН-14/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/25,СТ-ФН-14/aside/1 preview.jpg?1693648282",
+				"webp": "Клинкер/25,СТ-ФН-14/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/25,СТ-ФН-14/aside/2 preview.jpg?1693648291",
+				"webp": "Клинкер/25,СТ-ФН-14/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/25,СТ-ФН-14/palette/palette-1.png?1693648284",
+			"webp": "Клинкер/25,СТ-ФН-14/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 26,
+		"name": "СТ-ФН-22",
+		"house": {
+			"jpg": "Клинкер/26,СТ-ФН-22/СТ-ФН-22.jpg?1703240833",
+			"webp": "Клинкер/26,СТ-ФН-22/СТ-ФН-22.webp"
+		},
+		"variants": [
+			["Клинкер/26,СТ-ФН-22/aside/1.jpg"],
+			["Клинкер/26,СТ-ФН-22/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/26,СТ-ФН-22/aside/1 preview.jpg?1703240853",
+				"webp": "Клинкер/26,СТ-ФН-22/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/26,СТ-ФН-22/aside/2 preview.jpg?1703240869",
+				"webp": "Клинкер/26,СТ-ФН-22/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/26,СТ-ФН-22/palette/palette-1.png?1703240854",
+			"webp": "Клинкер/26,СТ-ФН-22/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 27,
+		"name": "СТ-ФН-23",
+		"house": {
+			"jpg": "Клинкер/27,СТ-ФН-23/СТ-ФН-23.jpg?1693647805",
+			"webp": "Клинкер/27,СТ-ФН-23/СТ-ФН-23.webp"
+		},
+		"variants": [
+			["Клинкер/27,СТ-ФН-23/aside/1.jpg"],
+			["Клинкер/27,СТ-ФН-23/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/27,СТ-ФН-23/aside/1 preview.jpg?1693647811",
+				"webp": "Клинкер/27,СТ-ФН-23/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/27,СТ-ФН-23/aside/2 preview.jpg?1693647815",
+				"webp": "Клинкер/27,СТ-ФН-23/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/27,СТ-ФН-23/palette/palette-1.png?1693647813",
+			"webp": "Клинкер/27,СТ-ФН-23/palette/palette-1.webp"
+		}
+	},
+	{
+		"id": 28,
+		"name": "СТ-М-01",
+		"house": {
+			"jpg": "Клинкер/28,СТ-М-01/СТ-М-01.jpg?1703251949",
+			"webp": "Клинкер/28,СТ-М-01/СТ-М-01.webp"
+		},
+		"variants": [
+			["Клинкер/28,СТ-М-01/aside/1.jpg"],
+			["Клинкер/28,СТ-М-01/aside/2.jpg"]
+		],
+		"previews": [
+			{
+				"jpg": "Клинкер/28,СТ-М-01/aside/1 preview.jpg?1703251966",
+				"webp": "Клинкер/28,СТ-М-01/aside/1 preview.webp"
+			},
+			{
+				"jpg": "Клинкер/28,СТ-М-01/aside/2 preview.jpg?1703251985",
+				"webp": "Клинкер/28,СТ-М-01/aside/2 preview.webp"
+			}
+		],
+		"palette": {
+			"png": "Клинкер/28,СТ-М-01/palette/palette-1.png?1703251968",
+			"webp": "Клинкер/28,СТ-М-01/palette/palette-1.webp"
+		}
+	}
+]

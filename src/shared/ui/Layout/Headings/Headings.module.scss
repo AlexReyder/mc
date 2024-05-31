@@ -1,0 +1,26 @@
+.Headings {
+	margin-bottom: 4rem;
+
+	@media only screen and (max-width: 56.25rem) {
+		text-align: center;
+	}
+}
+
+.Heading {
+	font-size: var(--font-size-section-heading);
+	font-weight: 700;
+	color: #f2f2f2;
+	letter-spacing: 1px;
+	line-height: 1;
+	color: var(--color-text-black);
+	position: relative;
+	margin-bottom: 4rem;
+}
+
+.Black {
+	color: var(--color-text-black);
+}
+
+.White {
+	color: var(--color-text-white);
+}

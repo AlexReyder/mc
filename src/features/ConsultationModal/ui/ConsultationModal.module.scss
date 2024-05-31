@@ -1,0 +1,143 @@
+.Wrapper {
+	width: 100%;
+	position: relative;
+	z-index: 30;
+	background-size: cover;
+	background-position: right center;
+	border-radius: 8px;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+	display: grid;
+	grid-template-columns: 40% 60%;
+	justify-items: center;
+	align-items: center;
+	transition: all 0.4s;
+	border-radius: 24px;
+
+	@media only screen and (max-width: 50rem) {
+		display: flex;
+		flex-direction: column;
+		height: 90vh;
+	}
+}
+
+.Left {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 2rem;
+	padding: 0 3rem;
+	height: 42rem;
+	background-color: #fff;
+	position: relative;
+	border-top-left-radius: 24px;
+	border-bottom-left-radius: 24px;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: -8rem;
+		width: 8rem;
+		height: 100%;
+		background: linear-gradient(
+			to bottom right,
+			#fff 51%,
+			#fff 50%,
+			transparent 52%,
+			transparent 100%
+		);
+
+		@media only screen and (max-width: 50rem) {
+			background: linear-gradient(
+				to bottom right,
+				#fff 50%,
+				#fff 49%,
+				transparent 50%,
+				transparent 100%
+			);
+			height: 15rem;
+			top: 100%;
+			right: 0;
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 50rem) {
+		height: 50%;
+		width: 100%;
+		border-top-right-radius: 24px;
+		border-bottom-left-radius: 0;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+
+.Right {
+	padding-left: 8rem;
+	padding-top: 6rem;
+	background-color: var(--color-primary);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	border-top-right-radius: 24px;
+	border-bottom-right-radius: 24px;
+
+	@media only screen and (max-width: 50rem) {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 24px;
+		padding-left: 0;
+	}
+}
+
+.Submit {
+	background-color: #fff;
+	color: var(--color-text-black);
+	padding: 1.5rem 3rem;
+	border-radius: 7px;
+	margin-top: 1.5rem;
+}
+.PhoneContainer {
+	display: contents;
+}
+
+.ModalInput {
+	background-color: transparent;
+	width: 80%;
+	padding: 1.5rem 3rem;
+	border: 3px solid #fff;
+	border-radius: 12px;
+	font-family: var(--font-family-text);
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: #fff;
+	transition: border 0.3s;
+
+	&::placeholder {
+		font-family: var(--font-family-text);
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: #fff;
+	}
+
+	&:focus {
+		border-color: #fff;
+		outline: none;
+	}
+}
+
+.Modal_heading {
+	font-size: 2.4rem;
+	font-weight: 500;
+	color: var(--color-text-black);
+}
+.Modal_subheading {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: var(--color-text-black);
+}

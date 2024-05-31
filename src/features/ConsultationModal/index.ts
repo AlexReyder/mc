@@ -1,0 +1,1 @@
+export { ConsultationModal } from './ui/ConsultationModal';

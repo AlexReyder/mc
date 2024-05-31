@@ -1,0 +1,39 @@
+.SidebarWidgetButton {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: start;
+    background-color: rgba($color: #222, $alpha: 0.9);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    transition: all 0.3s;
+    padding-right: 20px;
+
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            width: 200px;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 56.25rem) {
+        width: calc(100%/3);
+        height: 52px;
+        padding-right: 0;
+        padding: 1rem;
+        border-radius: 12px;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 25rem) {
+        flex-direction: column;
+        gap: 0;
+        height: 66px;
+    }
+}

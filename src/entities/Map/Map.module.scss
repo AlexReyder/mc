@@ -1,0 +1,7 @@
+.Map {
+	height: 100vh;
+
+	@media only screen and (max-width: 58.875rem) {
+		height: 400px;
+	}
+}

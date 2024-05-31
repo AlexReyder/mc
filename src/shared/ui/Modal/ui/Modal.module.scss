@@ -1,0 +1,99 @@
+.Modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	z-index: -1;
+	color: var(--primary-color);
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background: var(--overlay-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+}
+
+.content {
+	// padding: 20px;
+	border-radius: 26px;
+	background: #fff;
+	transition: 0.3s transform;
+	transform: scale(0.5);
+	width: 70%;
+}
+
+.Consult {
+	@media only screen and (max-width: 50rem) {
+		// height: 90%;
+	}
+
+	@media only screen and (max-width: 25rem) {
+		width: 90%;
+	}
+}
+
+.Quiz {
+	border-radius: 38px;
+	width: 95%;
+	// height: 90%;
+
+	@media only screen and (max-width: 56.25rem) {
+		& > div {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.opened {
+	pointer-events: auto;
+	opacity: 1;
+	z-index: var(--modal-z-index);
+
+	.content {
+		transform: scale(1);
+	}
+}
+
+.isClosing {
+	.content {
+		transform: scale(0.2);
+	}
+}
+
+.Close {
+	position: absolute;
+	top: -3.5rem;
+	right: -3rem;
+	font-size: 4.8rem;
+	color: #777777;
+	transition: color 0.3s ease-out;
+	z-index: 100;
+
+	&:hover {
+		color: #fff;
+	}
+
+	@media only screen and (max-width: 56.25rem) {
+		color: #fff;
+	}
+
+	@media only screen and (max-width: 25rem) {
+		top: -4.5rem;
+		right: -1rem;
+	}
+}
+
+.Quiz .Close {
+	@media only screen and (max-width: 56.25rem) {
+		top: -4.5rem;
+		right: -1rem;
+	}
+}

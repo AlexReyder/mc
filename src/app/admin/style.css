@@ -1,0 +1,69 @@
+html,
+body,
+#root,
+.app,
+.content {
+	height: 100%;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	overflow: auto;
+}
+
+.app {
+	display: flex;
+	position: relative;
+	overflow-y: hidden;
+	@media only screen and (max-width: 37.5rem) {
+		flex-direction: column;
+	}
+}
+
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: rgb(37, 148, 251);
+}
+
+.draggable {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20rem;
+	height: 20rem;
+	background-color: #9749ff;
+	margin-right: 10px;
+	color: white;
+}
+
+.drag_item {
+	padding: 5px 10px;
+	width: 8rem;
+	height: auto;
+	color: black;
+	background-color: white;
+}
+
+.agencies__container {
+	margin: 0 0 0 10px;
+}
+
+.agencies__cell > input {
+	font-size: 14px;
+}
+
+.agencies__apply {
+	background-color: transparent;
+	border: 3px solid #c79d5e;
+	padding: 1rem 3rem;
+	font-size: 18px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.agencies__apply--active {
+	background-color: #c79d5e;
+	border: 3px solid #c79d5e;
+	color: #fff;
+}

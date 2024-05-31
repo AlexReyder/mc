@@ -1,0 +1,31 @@
+.Hero {
+	background-color: #000;
+	max-width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.Touch {
+	width: 50%;
+	height: 100%;
+	padding-left: 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.Heading {
+	font-size: 6.4rem;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 0.5px;
+	line-height: 1.25;
+	text-align: left;
+	margin-bottom: 4rem;
+	position: relative;
+	@media only screen and (max-width: 23.75rem) {
+		font-size: 12vw;
+	}
+}

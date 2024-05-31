@@ -1,0 +1,61 @@
+.PrimaryButton,
+.PrimaryButton:link,
+.PrimaryButton:visited {
+	border: none;
+	padding: 2rem 3.5rem;
+	min-width: 280px;
+	border-radius: 10rem;
+	background-color: transparent;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.6rem;
+	font-weight: 600;
+	letter-spacing: 0.15rem;
+	transition: 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 15;
+	cursor: pointer;
+	@media only screen and (max-width: 20.625rem) {
+		min-width: 210px;
+	}
+
+	& > span {
+		font-size: 1.6rem;
+		font-weight: 600;
+	}
+}
+
+.PrimaryButton::after,
+.PrimaryButton::before {
+	content: '';
+	left: 0;
+	height: 100%;
+	border-radius: 10rem;
+	bottom: 0;
+}
+
+.PrimaryButton::after {
+	position: absolute;
+	width: 100%;
+	background-color: var(--color-primary);
+	z-index: -2;
+}
+
+.PrimaryButton::before {
+	position: absolute;
+	width: 0%;
+	background-color: #fff;
+	transition: 0.5s;
+	z-index: -1;
+}
+
+.PrimaryButton:hover {
+	& > span {
+		color: #000;
+	}
+}
+
+.PrimaryButton:hover:before {
+	width: 100%;
+}
