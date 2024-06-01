@@ -11,6 +11,7 @@ export const HeroSlider = () => {
 			className={cls.Sw}
 			direction='vertical'
 			slidesPerView={1}
+			allowTouchMove={false}
 			effect={'creative'}
 			creativeEffect={{
 				prev: {

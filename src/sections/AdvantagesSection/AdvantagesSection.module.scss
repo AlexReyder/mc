@@ -1,9 +1,6 @@
 .Section {
 	background-color: #000;
-}
-
-.Container {
-	// padding: 9.6rem 0;
+	overflow: hidden;
 }
 
 .List {
@@ -32,14 +29,14 @@
 
 .Item {
 	display: flex;
-	gap: 5rem;
+	gap: 3rem;
 	align-items: start;
 	padding: 5rem 0;
 	padding-left: 0;
 	padding-bottom: 10rem;
 	transition: all 0.3s;
 	position: relative;
-	@media only screen and (max-width: 80rem) {
+	@media only screen and (max-width: 88.125rem) {
 		flex-direction: column;
 		padding-left: 0;
 	}
@@ -102,14 +99,13 @@
 	}
 	@media only screen and (max-width: 80rem) {
 		color: #fff;
-		// opacity: 1;
-		// visibility: visible;
 		position: relative;
 		top: unset;
 		right: unset;
 		width: 100%;
 		margin-left: 0;
-		margin-top: 1rem;
+		margin-top: 0;
+		transform: none;
 		& > strong {
 			color: #fff;
 		}

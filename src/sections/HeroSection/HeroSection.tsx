@@ -18,6 +18,7 @@ export const HeroSection = () => {
 					Полимерный микроцемент идеальный материал для отделки и дизайна
 				</h2>
 				<PrimaryButton
+					className={cls.PrimaryButton}
 					text='Получить консультацию'
 					onClick={() => setModalConsultOpen(true)}
 				/>

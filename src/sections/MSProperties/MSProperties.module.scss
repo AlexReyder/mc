@@ -1,3 +1,11 @@
+.Heading {
+	text-align: center;
+	padding: 9.6rem 7rem 0 7rem;
+	@media only screen and (max-width: 37.5rem) {
+		padding: 4.8rem 3rem 0 3rem;
+	}
+}
+
 .Wrapper {
 	background-color: #fff;
 	border-bottom: 1px solid black;
@@ -6,14 +14,31 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 0px 0px;
-	// padding: 0 5px;
+	margin-bottom: 9.6rem;
+	@media only screen and (max-width: 53.125rem) {
+		grid-template-columns: repeat(3, 1fr);
+		// grid-template-rows: repeat(3, 1fr);
+	}
+	@media only screen and (max-width: 37.5rem) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto auto auto auto auto auto calc(100% / 8);
+		grid-template-areas:
+			'Item1 Item3'
+			'Item5 Item2'
+			'Item6 Item4'
+			'Item8 Item7'
+			'Item10 Item9'
+			'Item11 Item12'
+			'Item13 Item14'
+			'Item15 Item15';
+	}
 }
 
 .Item {
-	aspect-ratio: 1/1;
 	min-width: calc(100% / 4);
 	width: 100%;
 	height: 100%;
+	aspect-ratio: 1/1;
 	padding: 2rem;
 	text-align: center;
 	display: flex;
@@ -25,14 +50,87 @@
 	position: relative;
 }
 
-.Title {
-	font-size: 1.6rem;
-	font-weight: 500;
-	color: #000;
-	text-align: left;
-	width: 100%;
-}
+@media only screen and (max-width: 37.5rem) {
+	.Item {
+		aspect-ratio: 1/1;
+		min-width: calc(100% / 4);
+		width: 100%;
+		height: 100%;
+		padding: 2rem;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border-top: 1px solid black;
+		border-right: 1px solid black;
+		position: relative;
+	}
 
-.Bold {
-	font-weight: 600;
+	.Title {
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: #000;
+		text-align: left;
+		width: 100%;
+	}
+
+	.Bold {
+		font-weight: 600;
+	}
+
+	.Item1 {
+		grid-area: Item1;
+		@media only screen and (max-width: 20rem) {
+			hyphens: auto;
+		}
+	}
+	.Item2 {
+		grid-area: Item2;
+	}
+	.Item3 {
+		grid-area: Item3;
+		@media only screen and (max-width: 20rem) {
+			hyphens: auto;
+		}
+	}
+	.Item4 {
+		grid-area: Item4;
+	}
+	.Item5 {
+		grid-area: Item5;
+	}
+	.Item6 {
+		grid-area: Item6;
+	}
+	.Item7 {
+		grid-area: Item7;
+	}
+	.Item8 {
+		grid-area: Item8;
+	}
+	.Item9 {
+		grid-area: Item9;
+	}
+	.Item10 {
+		grid-area: Item10;
+	}
+	.Item11 {
+		grid-area: Item11;
+	}
+	.Item12 {
+		grid-area: Item12;
+	}
+	.Item13 {
+		grid-area: Item13;
+	}
+	.Item14 {
+		grid-area: Item14;
+	}
+	.Item15 {
+		grid-area: Item15;
+		& > p {
+			text-align: center;
+		}
+	}
 }

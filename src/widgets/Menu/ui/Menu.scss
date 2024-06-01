@@ -22,7 +22,7 @@
 	height: 2px;
 	width: 60px;
 	display: block;
-	background-color: #222;
+	background-color: #fff;
 	cursor: pointer;
 	-webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
 	transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
@@ -40,7 +40,7 @@
 }
 
 .menu-icon__line-left {
-	background-color: #222;
+	background-color: #fff;
 	width: 33px;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
@@ -51,7 +51,7 @@
 }
 
 .menu-icon__line-right {
-	background-color: #222;
+	background-color: #fff;
 	width: 33px;
 	float: right;
 	-webkit-transition: all 200ms linear;
@@ -76,7 +76,7 @@
 	}
 
 	.menu-icon:hover .menu-icon__line {
-		background-color: #222;
+		background-color: #fff;
 	}
 }
 
@@ -93,7 +93,7 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(110, 55, 0, 0.6);
+	background: rgba(49, 55, 64, 0.6);
 	border-bottom-left-radius: 200%;
 	z-index: -1;
 	-webkit-transition: -webkit-transform cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
@@ -110,7 +110,7 @@
 }
 
 .nav:after {
-	background: rgb(110, 55, 0);
+	background: rgb(49, 55, 64);
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }

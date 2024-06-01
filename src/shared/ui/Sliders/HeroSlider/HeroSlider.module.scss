@@ -1,4 +1,8 @@
 .Sw {
 	width: 50%;
 	height: 100%;
+	@media only screen and (max-width: 56.25rem) {
+		width: 100%;
+		height: 100%;
+	}
 }

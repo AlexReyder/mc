@@ -12,6 +12,9 @@
 .Carousel {
 	position: relative;
 	height: 300vh;
+	@media only screen and (max-width: 37.5rem) {
+		height: 480vh;
+	}
 }
 
 .CarouselWrapper {
@@ -29,16 +32,22 @@
 	gap: 8rem;
 	padding: 44px 20px 100px;
 	transition: all 0.3s;
+	height: 100%;
 }
 .FirstObject {
 	margin-left: 20rem;
 }
 
 .Object {
-	// overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	position: relative;
-	height: 80vh;
+	height: 100%;
 	width: 50vw;
+	@media only screen and (max-width: 37.5rem) {
+		width: 80vw;
+	}
 }
 
 .ObjectImageContainer {

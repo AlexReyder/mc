@@ -3,6 +3,9 @@
 	--font-size-text: 1.6rem;
 	--font-size-l: 2.4rem;
 	--font-size-section-heading: 7rem;
+	@media only screen and (max-width: 37.5rem) {
+		--font-size-section-heading: 2rem;
+	}
 
 	--font-line-m: 24px;
 	--font-line-l: 32px;
