@@ -9,8 +9,12 @@
 	font-size: var(--font-size-small);
 	color: var(--color-text-grey);
 	& > a {
-		color: #fff;
+		// color: #fff;
 	}
+}
+
+.Link {
+	// display: contents;
 }
 
 .CheckboxWrapper input[type='checkbox'] {
@@ -52,7 +56,7 @@
 .CheckboxWrapper .Label::before {
 	top: calc(var(--checkbox-height) * 0.72);
 	left: calc(var(--checkbox-height) * 0.41);
-	box-shadow: 0 0 0 calc(var(--checkbox-height) * 0.05) #222;
+	// box-shadow: 0 0 0 calc(var(--checkbox-height) * 0.05) #222;
 	-moz-transform: rotate(-135deg);
 	-ms-transform: rotate(-135deg);
 	-o-transform: rotate(-135deg);

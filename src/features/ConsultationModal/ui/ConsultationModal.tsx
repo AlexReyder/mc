@@ -1,52 +1,30 @@
 'use client'
-import { DefaultButton } from '@/shared/ui/Buttons/DefaultButton/DefaultButton'
+import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton/PrimaryButton'
 import { ModalInput } from '@/shared/ui/Inputs/ModalInput/ModalInput'
 import { Modal } from '@/shared/ui/Modal'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import { ReactNode, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 import cls from './ConsultationModal.module.scss'
-export enum ConsultationDataTypes {
-	CONSULTATION = 'Консультация',
-	VIDEOCALL = 'Видеоконсультация',
-	ORDERCALL = 'Заказать звонок',
-	DESIGN = 'Проектирование домов',
-	BUILDING_WORKS = 'Строительно-монтажные работы',
-	ELECTRO_WORKS = 'Электромонтажные работы',
-	VENTILATION = 'Монтаж систем вентиляции',
-	DISMANTLING_WORKS = 'Демонтажные работы',
-	FINISHING_WORKS = 'Отделочные работы',
-}
 
 interface ConsultationModalProps {
-	heading: string
 	isOpen: boolean
 	handleClose: () => void
-	data?: any
 }
 
 export const ConsultationModal = ({
-	heading,
 	isOpen,
-	data,
 	handleClose,
 }: ConsultationModalProps) => {
 	const { control, handleSubmit, reset } = useForm({
 		defaultValues: {
 			username: '',
 			phone: '',
-			theme: data,
 		},
 	})
-	const [isSend, setIsSend] = useState('Отправить заявку')
 	const router = useRouter()
-
 	const onSubmit = (data: any) => {
-		// const output = {
-		// 	...data,
-		// }
 		axios
 			.post(`${process.env.domainUrl}/api/mail`, data, {
 				headers: {
@@ -55,7 +33,7 @@ export const ConsultationModal = ({
 			})
 			.then(res => {
 				reset()
-				setIsSend('Отправлено')
+				router.push('/spasibo')
 			})
 	}
 
@@ -63,7 +41,7 @@ export const ConsultationModal = ({
 		<Modal type='Consult' isOpen={isOpen} onClose={handleClose}>
 			<div className={cls.Wrapper}>
 				<div className={cls.Left}>
-					<ConsultaionHeading heading={heading} subheading={'subheading'} />
+					<ConsultaionHeading />
 				</div>
 				<form onSubmit={handleSubmit(onSubmit)} className={cls.Right}>
 					<Controller
@@ -93,9 +71,7 @@ export const ConsultationModal = ({
 						)}
 					/>
 
-					<DefaultButton type='submit' className={cls.Submit}>
-						{isSend}
-					</DefaultButton>
+					<PrimaryButton type='submit' text='Отправить заявку' />
 				</form>
 			</div>
 		</Modal>
@@ -107,20 +83,16 @@ interface ConsultaionHeadingProps {
 	subheading: string | ReactNode
 }
 
-export const ConsultaionHeading = ({
-	heading,
-	subheading,
-}: ConsultaionHeadingProps) => {
-	const subheadingText = (
-		<>
-			Оставьте номер телефона.
-			<br /> Наш менеджер перезвонит и подробно ответит на Ваши вопросы.
-		</>
-	)
+export const ConsultaionHeading = () => {
 	return (
 		<>
-			<h3 className={cls.Modal_heading}>{heading}</h3>
-			<p className={cls.Modal_subheading}>{subheadingText}</p>
+			<h3 className={cls.Modal_heading}>
+				Поможем с выбором и рассчитаем стоимость
+			</h3>
+			<p className={cls.Modal_subheading}>
+				Оставьте свои данные и наш менеджер поможет подобрать подходящий вариант
+				под ваш запрос.
+			</p>
 		</>
 	)
 }

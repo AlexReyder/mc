@@ -1,46 +1,135 @@
+import axios from 'axios'
 import 'photoswipe/dist/photoswipe.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import cls from './Constructor.module.scss'
 
 interface ConstructorProps {
-	data: ProductI[]
+	startFilter: string
 }
 
-const Constructor = ({ data }: ConstructorProps) => {
+const Constructor = ({ startFilter }: ConstructorProps) => {
 	useEffect(() => {
-		setCurrentObject(0)
-	}, [data])
+		axios
+			.get('/api/admin/getProducts')
+			.then((res: any) => {
+				setData(res.data)
+				const filtredData = res.data.filter(
+					(el: ProductI) => el.type === startFilter
+				)
+				setFiltredData(filtredData)
+				setCurrentFilter(startFilter)
+			})
+			.finally(() => {
+				setCurrentObject(0)
+				if (refContainer.current) {
+					refContainer.current.scrollIntoView({ behavior: 'smooth' })
+				}
+			})
+	}, [])
+
+	const [data, setData] = useState<ProductI[]>([])
+	const [filtredData, setFiltredData] = useState<ProductI[]>([])
 	const [currentObject, setCurrentObject] = useState<number>(0)
+	const [currentFilter, setCurrentFilter] = useState<string>('')
+
+	const refContainer = useRef(null)
+
+	function filterData(filter: string) {
+		setCurrentFilter(filter)
+		const filtredData = data.filter((el: ProductI) => el.type === filter)
+		setFiltredData(filtredData)
+		setCurrentObject(0)
+	}
+
 	function handleShowObject(i: number) {
 		setCurrentObject(i)
+		if (refContainer.current) {
+			refContainer.current.scrollIntoView({ behavior: 'smooth' })
+		}
 	}
 	return (
-		<figure>
-			{currentObject > data.length - 1 ? null : (
+		<figure ref={refContainer}>
+			{filtredData.length > 0 ? (
 				<div className={cls.DesignMain}>
+					<div className={cls.FiltersWrapperPhone}>
+						<button
+							className={`${cls.Filter} ${
+								currentFilter === 'walls' ? cls.FilterActive : ''
+							}`}
+							onClick={() => filterData('walls')}
+						>
+							Стены
+						</button>
+						<button
+							className={`${cls.Filter} ${
+								currentFilter === 'floors' ? cls.FilterActive : ''
+							}`}
+							onClick={() => filterData('floors')}
+						>
+							Полы
+						</button>
+						<button
+							className={`${cls.Filter} ${
+								currentFilter === 'wet' ? cls.FilterActive : ''
+							}`}
+							onClick={() => filterData('wet')}
+						>
+							Мокрые зоны
+						</button>
+					</div>
 					<div className={cls.DesignObject}>
 						<img
-							src={data[currentObject].object[1]}
+							src={filtredData[currentObject].object[1]}
 							alt=''
 							className={cls.DesignObjectImage}
 						/>
 					</div>
 					<div className={cls.DesignAside}>
-						<p className={cls.DesignTitle}>{data[currentObject].name}</p>
-						<div className='design__variants'>
+						<div className={cls.FiltersWrapper}>
+							<button
+								className={`${cls.Filter} ${
+									currentFilter === 'walls' ? cls.FilterActive : ''
+								}`}
+								onClick={() => filterData('walls')}
+							>
+								Стены
+							</button>
+							<button
+								className={`${cls.Filter} ${
+									currentFilter === 'floors' ? cls.FilterActive : ''
+								}`}
+								onClick={() => filterData('floors')}
+							>
+								Полы
+							</button>
+							<button
+								className={`${cls.Filter} ${
+									currentFilter === 'wet' ? cls.FilterActive : ''
+								}`}
+								onClick={() => filterData('wet')}
+							>
+								Мокрые зоны
+							</button>
+						</div>
+
+						<div className={cls.DisignAsideWrapper}>
+							<p className={cls.DesignTitle}>
+								{filtredData[currentObject].name}
+							</p>
+
 							<div className='design__variant-wrapper variants-visible'>
 								<Gallery>
 									<Item
-										original={data[currentObject].palette[0]}
-										thumbnail={data[currentObject].palette[1]}
+										original={filtredData[currentObject].palette[0]}
+										thumbnail={filtredData[currentObject].palette[1]}
 										width='1000'
 										height='800'
 										alt='Палитра микроцемента'
 									>
 										{({ ref, open }) => (
 											<img
-												src={data[currentObject].palette[1]}
+												src={filtredData[currentObject].palette[1]}
 												alt='Вариант палитры микроцемента'
 												className={cls.DesignVariant}
 												ref={ref}
@@ -60,10 +149,10 @@ const Constructor = ({ data }: ConstructorProps) => {
 							</span>
 						</h2>
 						<div className={cls.DesignPanelWrapper}>
-							{data.map((item, i) => (
+							{filtredData.map((item, i) => (
 								<div key={`miniature_${i}`}>
 									<img
-										src={data[i].minuature[1]}
+										src={item.minuature[1]}
 										alt=''
 										className={`${cls.DesignPallete} ${
 											i === currentObject ? cls.DesignActive : ''
@@ -76,8 +165,11 @@ const Constructor = ({ data }: ConstructorProps) => {
 						</div>
 					</div>
 				</div>
+			) : (
+				<p>Нет информации</p>
 			)}
 		</figure>
+		// currentObject > data.length - 1 ?
 	)
 }
 export default Constructor

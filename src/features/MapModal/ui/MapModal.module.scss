@@ -1,3 +1,7 @@
+.Modal {
+	width: 35vh;
+}
+
 .Wrapper {
 	width: 100%;
 	position: relative;
@@ -6,16 +10,23 @@
 	background-position: right center;
 	border-radius: 8px;
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-	display: grid;
-	grid-template-columns: 40% 60%;
-	justify-items: center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	padding: 4rem;
 	transition: all 0.4s;
 	border-radius: 24px;
+}
 
-	@media only screen and (max-width: 50rem) {
-		display: flex;
-		flex-direction: column;
-		height: 90vh;
-	}
+.Communicate__item {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.Icon {
+	height: 42px;
+	width: 42px;
 }

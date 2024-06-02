@@ -30,16 +30,6 @@ const ReasonSection = () => {
 }
 export default ReasonSection
 
-const Reason = ({ reason }: any) => {
-	return (
-		<div key={reason.id} className={cls.ReasonWrapper}>
-			<div className={cls.Reason}>
-				<img src={reason.image} alt={reason.name} />
-			</div>
-		</div>
-	)
-}
-
 const reasonsData = [
 	{
 		id: 1,

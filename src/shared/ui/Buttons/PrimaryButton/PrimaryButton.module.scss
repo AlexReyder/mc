@@ -42,6 +42,13 @@
 	z-index: -2;
 }
 
+.PrimaryButton.Dark::after {
+	position: absolute;
+	width: 100%;
+	background-color: var(--color-primary);
+	z-index: -2;
+}
+
 .PrimaryButton::before {
 	position: absolute;
 	width: 0%;
@@ -50,9 +57,23 @@
 	z-index: -1;
 }
 
+.PrimaryButton.Dark::before {
+	position: absolute;
+	width: 0%;
+	background-color: #000;
+	transition: 0.5s;
+	z-index: -1;
+}
+
 .PrimaryButton:hover {
 	& > span {
 		color: #000;
+	}
+}
+
+.PrimaryButton.Dark:hover {
+	& > span {
+		color: #fff;
 	}
 }
 

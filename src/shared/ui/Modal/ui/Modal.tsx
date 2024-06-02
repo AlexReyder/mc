@@ -76,7 +76,7 @@ export const Modal = (props: ModalProps) => {
 				<section className={classNames(cls.Modal, mods, [])}>
 					<figure className={cls.overlay} onClick={closeHandler}>
 						<section
-							className={`${cls.content} ${cls[type!]}`}
+							className={`${cls.content} ${cls[type!]} ${className}`}
 							onClick={onContentClick}
 						>
 							<DefaultButton onClick={closeHandler} className={cls.Close}>

@@ -126,6 +126,7 @@ export const FinishSlide = ({ className, answers }: FinishSlideProps) => {
 					<PrimaryButton
 						text='Получить каталог, подарки и скидку'
 						type='submit'
+						theme='Dark'
 					/>
 				</form>
 			</div>

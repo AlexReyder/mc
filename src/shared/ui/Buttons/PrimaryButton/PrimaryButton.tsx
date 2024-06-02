@@ -5,7 +5,7 @@ import cls from './PrimaryButton.module.scss'
 interface PrimaryButtonProps {
 	className?: string
 	text: string | ReactNode
-	theme?: 'White' | 'White-gold'
+	theme?: 'White' | 'Dark'
 	type?: 'button' | 'submit'
 	onClick?: any
 	value?: string
