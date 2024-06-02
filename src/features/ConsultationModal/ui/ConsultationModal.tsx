@@ -48,7 +48,12 @@ export const ConsultationModal = ({
 						name='username'
 						control={control}
 						render={({ field }) => (
-							<ModalInput placeholder='Ваше имя' required {...field} />
+							<ModalInput
+								placeholder='Ваше имя'
+								className={cls.NameInput}
+								required
+								{...field}
+							/>
 						)}
 					/>
 					<Controller

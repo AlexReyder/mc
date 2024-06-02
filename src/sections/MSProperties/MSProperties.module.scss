@@ -56,11 +56,17 @@
 	color: #000;
 	text-align: left;
 	width: 100%;
+	@media only screen and (max-width: 18.75rem) {
+		font-size: 1.4rem;
+	}
 }
 
 .Bold {
 	// font-size: 1.8rem;
 	font-weight: 700;
+	@media only screen and (max-width: 20rem) {
+		hyphens: auto;
+	}
 }
 
 @media only screen and (max-width: 37.5rem) {

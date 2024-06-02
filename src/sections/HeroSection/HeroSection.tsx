@@ -25,8 +25,6 @@ export const HeroSection = () => {
 			</div>
 			<HeroSlider />
 			<ConsultationModal
-				data='Консультация'
-				heading='Консультация'
 				isOpen={isModalConsultOpen}
 				handleClose={handleModalClose}
 			/>

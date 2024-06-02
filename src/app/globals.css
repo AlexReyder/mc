@@ -3,8 +3,14 @@
 	--font-size-text: 1.6rem;
 	--font-size-l: 2.4rem;
 	--font-size-section-heading: 7rem;
-	@media only screen and (max-width: 37.5rem) {
-		--font-size-section-heading: 2rem;
+	@media only screen and (max-width: 42.1875rem) {
+		--font-size-section-heading: 4.2rem;
+	}
+	@media only screen and (max-width: 22.1875rem) {
+		--font-size-section-heading: 3.6rem;
+	}
+	@media only screen and (max-width: 19.6875rem) {
+		--font-size-section-heading: 3.2rem;
 	}
 
 	--font-line-m: 24px;
@@ -52,11 +58,11 @@
 	--neutrals7: #f4f5f6;
 	--neutrals8: #fcfcfd;
 
+	--vw: 100vw;
 	--checkbox-height: 25px;
 	--unitInput: calc(var(--vw) / 1440);
-	--vw: 100vw;
 	@media only screen and (max-width: 56.25rem) {
-		--unitInput: calc(var(--vw) / 900);
+		--unitInput: calc(var(--vw) / 450);
 	}
 	@media only screen and (max-width: 37.5rem) {
 		--unit: calc(var(--vw) / 600);
