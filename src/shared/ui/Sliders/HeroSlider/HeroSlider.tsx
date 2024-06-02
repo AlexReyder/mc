@@ -9,9 +9,9 @@ export const HeroSlider = () => {
 	return (
 		<Swiper
 			className={cls.Sw}
-			direction='vertical'
 			slidesPerView={1}
-			allowTouchMove={false}
+			touchRatio={1}
+			// allowTouchMove={false}
 			effect={'creative'}
 			creativeEffect={{
 				prev: {

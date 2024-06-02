@@ -1,28 +1,37 @@
-.design {
-	background-color: #fff;
-	// margin-top: -250px;
-	padding: 230px 0 9.6rem 0;
-}
-.design__houses {
+.DesignMain {
+	display: grid;
+	grid-template-columns: 65% 35%;
 	position: relative;
-	flex-basis: 75%;
+	height: 100%;
+	min-height: 100vh;
+}
+
+.DesignObject {
+	height: 80vh;
+	position: relative;
 	transition: all 0.3s;
 }
+
+.DesignObjectImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .design__houses--increase {
 	flex-basis: 100%;
 }
-.design__house-img {
-	width: 100%;
-}
+
 .design__house-img--hidden {
 	display: none;
 }
-.design__aside {
-	flex-basis: 25%;
+
+.DesignAside {
 	padding: 0 1rem;
 	overflow: hidden;
 	transition: all 0.3s;
 }
+
 .design__aside--shrink {
 	flex-basis: 0;
 	padding: 0;
@@ -32,86 +41,62 @@
 		margin: 2rem 0;
 	}
 }
-.design__panel {
+.DesignPanel {
 	background-color: #fff;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 1rem 3rem 3rem 3rem;
 	-webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 	-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-	position: absolute;
-	bottom: -15%;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
+	bottom: 4rem;
+	grid-column: 1 / end;
+	// left: 50%;
+	// transform: translateX(-50%);
 	transition: all 0.3s;
 }
 .design__panel--shrink {
 	bottom: 0%;
 }
-@media only screen and (max-width: 81.25rem) {
-	.design__panel--shrink {
-		bottom: 0% !important;
-	}
-}
-@media only screen and (max-width: 81.25rem) {
-	.design__panel {
-		bottom: -20%;
-	}
-}
-@media only screen and (max-width: 76.25rem) {
-	.design__panel {
-		width: 95%;
-		position: relative;
-		left: unset;
-		bottom: unset;
-		transform: none;
-		margin-top: 1rem;
-	}
-}
-@media only screen and (max-width: 24.25em) {
-	.design__panel {
-		padding: 1rem 1rem 3rem 1rem;
-	}
-}
-.design__panel .wrapper {
-	display: flex;
-	flex-wrap: wrap;
+
+.DesignPanelWrapper {
+	display: grid;
+	// grid-template-columns: repeat(10, 1fr);
+	grid-template-columns: repeat(auto-fill, 70px);
 	gap: 2rem;
-}
-@media only screen and (max-width: 47.375rem) {
-	.design__panel .wrapper {
+
+	@media only screen and (max-width: 47.375rem) {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
 		justify-items: center;
 	}
-}
-@media only screen and (max-width: 41.25rem) {
-	.design__panel .wrapper {
+	@media only screen and (max-width: 41.25rem) {
 		grid-template-columns: repeat(6, 1fr);
 	}
-}
-@media only screen and (max-width: 35.75rem) {
-	.design__panel .wrapper {
+	@media only screen and (max-width: 35.75rem) {
 		grid-template-columns: repeat(5, 1fr);
 	}
-}
-@media only screen and (max-width: 29.9375rem) {
-	.design__panel .wrapper {
+
+	@media only screen and (max-width: 29.9375rem) {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
+
 .design__panel h2 {
 	margin-bottom: 1rem;
 }
-.design__variant {
+.DesignVariant {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 16/9;
 }
-.design__title {
+.DesignTitle {
 	font-size: 3.2rem;
 	font-weight: 400;
 	text-align: center;
-	color: #c79d5e;
+	color: var(--color-primary);
 }
 @media only screen and (max-width: 76.25rem) {
 	.design__title {
@@ -119,10 +104,16 @@
 		font-size: 4.2rem;
 	}
 }
-.design__palette {
+.PanelHeading {
+	font-size: 3.2rem;
+	font-weight: 500;
+	color: var(--color-primary);
+	margin-bottom: 1rem;
+}
+.DesignPallete {
 	width: 70px;
 	height: 50px;
-	outline: 0px solid #c79d5e;
+	outline: 0px solid var(--color-primary);
 	transition: all 0.1s;
 }
 @media only screen and (max-width: 24.25em) {
@@ -131,8 +122,8 @@
 		height: 35px;
 	}
 }
-.design__palette--active {
-	outline: 3px solid #c79d5e;
+.DesignActive {
+	outline: 3px solid var(--color-primary);
 }
 .design__shrink {
 	position: absolute;
@@ -165,17 +156,8 @@
 .design__shrink-icon--rotate {
 	transform: translate(-50%, -50%) rotate(180deg);
 }
-.DesignMain {
-	display: flex;
-	position: relative;
-	height: calc(100% - 70px);
-}
-@media only screen and (max-width: 76.25rem) {
-	.design__main {
-		flex-direction: column;
-	}
-}
-.design__name {
+
+.DesignName {
 	font-size: 1.4rem;
 	font-weight: 500;
 	color: #000;

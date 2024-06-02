@@ -12,7 +12,6 @@ const Constructor = ({ data }: ConstructorProps) => {
 		setCurrentObject(0)
 	}, [data])
 	const [currentObject, setCurrentObject] = useState<number>(0)
-	const [shrink, setShrink] = useState<boolean>(false)
 	function handleShowObject(i: number) {
 		setCurrentObject(i)
 	}
@@ -20,34 +19,15 @@ const Constructor = ({ data }: ConstructorProps) => {
 		<figure>
 			{currentObject > data.length - 1 ? null : (
 				<div className={cls.DesignMain}>
-					<div
-						className={`design__houses ${
-							!shrink ? 'design__houses--increase' : ''
-						}`}
-					>
-						<button
-							className='design__shrink'
-							onClick={() => setShrink(!shrink)}
-						>
-							<img
-								src='/img/constructor/shrink.png'
-								alt=''
-								className='design__shrink-icon design__shrink-icon--rotate'
-							/>
-						</button>
-
+					<div className={cls.DesignObject}>
 						<img
 							src={data[currentObject].object[1]}
 							alt=''
-							className='design__house-img'
+							className={cls.DesignObjectImage}
 						/>
 					</div>
-					<div
-						className={`design__aside  ${
-							!shrink ? 'design__aside--shrink' : ''
-						}`}
-					>
-						<p className='design__title'>{data[currentObject].name}</p>
+					<div className={cls.DesignAside}>
+						<p className={cls.DesignTitle}>{data[currentObject].name}</p>
 						<div className='design__variants'>
 							<div className='design__variant-wrapper variants-visible'>
 								<Gallery>
@@ -62,7 +42,7 @@ const Constructor = ({ data }: ConstructorProps) => {
 											<img
 												src={data[currentObject].palette[1]}
 												alt='Вариант палитры микроцемента'
-												className='design__variant'
+												className={cls.DesignVariant}
 												ref={ref}
 												onClick={open}
 											/>
@@ -72,25 +52,25 @@ const Constructor = ({ data }: ConstructorProps) => {
 							</div>
 						</div>
 					</div>
-					<div className='design__panel design__panel--shrink'>
-						<h2 className='section-heading'>
+					<div className={cls.DesignPanel}>
+						<h2 className={cls.PanelHeading}>
 							<span>Выбери </span>
 							<span className='section-heading section-heading--gold'>
 								свое сочетание
 							</span>
 						</h2>
-						<div className='wrapper'>
+						<div className={cls.DesignPanelWrapper}>
 							{data.map((item, i) => (
 								<div key={`miniature_${i}`}>
 									<img
 										src={data[i].minuature[1]}
 										alt=''
-										className={`design__palette ${
-											i === currentObject ? 'design__palette--active' : ''
+										className={`${cls.DesignPallete} ${
+											i === currentObject ? cls.DesignActive : ''
 										}`}
 										onClick={() => handleShowObject(i)}
 									/>
-									<p className='design__name'>{item.name}</p>
+									<p className={cls.DesignName}>{item.name}</p>
 								</div>
 							))}
 						</div>

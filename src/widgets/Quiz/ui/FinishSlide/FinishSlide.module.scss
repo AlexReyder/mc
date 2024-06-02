@@ -1,0 +1,197 @@
+.Finish {
+	display: flex;
+	@media only screen and (max-width: 56.25rem) {
+		flex-direction: column;
+	}
+}
+
+.Policy {
+	color: #000;
+}
+
+.Left {
+	flex-basis: 60%;
+	border: 1px solid #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	@media only screen and (max-width: 56.25rem) {
+		border: none;
+		flex-basis: 100%;
+	}
+}
+
+.Right {
+	flex-basis: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 1rem;
+	@media only screen and (max-width: 56.25rem) {
+		flex-basis: 100%;
+	}
+}
+
+.Footer {
+	width: 100%;
+}
+.Entity {
+	text-align: left;
+}
+
+.Title {
+	font-weight: 500;
+	font-size: 2.8rem;
+	text-align: left;
+	margin-bottom: 2rem;
+	@media only screen and (max-width: 56.25rem) {
+		text-align: center;
+	}
+}
+
+.Subtitle {
+	font-family: var(--font-family-text);
+	font-weight: 500;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.Body {
+	text-align: left;
+	padding: 4rem 4rem 1rem 4rem;
+}
+
+.Controls {
+	display: flex;
+	gap: 1.5rem;
+	margin-bottom: 2.5rem;
+
+	@media only screen and (max-width: 31rem) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.Text {
+	font-family: var(--font-family-text);
+	font-weight: 400;
+	font-size: 1.6rem;
+	transition: font-weight 0.3s ease-out;
+}
+
+.Form {
+	text-align: center;
+}
+
+.Input {
+	background-color: #f2f4f9;
+	width: 100%;
+	padding: 2rem 3rem;
+	border: 3px solid #fff;
+	border-radius: 12px;
+	font-family: var(--font-family-text);
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: var(--color-secondary);
+	transition: border 0.3s;
+	margin-bottom: 2.5rem;
+
+	&::placeholder {
+		font-family: var(--font-family-text);
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: var(--color-secondary);
+	}
+
+	&:focus {
+		border-color: var(--color-primary);
+		outline: none;
+	}
+
+	@media only screen and (max-width: 31rem) {
+		width: 100%;
+	}
+}
+
+.BText {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #444;
+	@media only screen and (max-width: 56.25rem) {
+		text-align: center;
+	}
+}
+
+.BonusText {
+	@media only screen and (max-width: 26.25rem) {
+		display: none;
+	}
+}
+
+.BonusContainer {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 2rem;
+	@media only screen and (max-width: 56.25rem) {
+		justify-content: center;
+	}
+	@media only screen and (max-width: 26.25rem) {
+		display: none;
+	}
+}
+
+.ProgressWrapper {
+	width: 100%;
+	padding-left: 2rem;
+	order: -1;
+	@media only screen and (max-width: 56.25rem) {
+		display: none;
+	}
+}
+.Progress {
+	background-color: #e6e6e6;
+	width: 100%;
+	height: 8px;
+}
+
+.Fraction {
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	width: calc(100% / 6);
+	height: 8px;
+	background-color: var(--color-primary);
+	transition: all 0.3s;
+}
+
+.ProgressText {
+	font-size: 1.4rem;
+}
+
+.ProgressTextGold {
+	font-weight: 700;
+	color: var(--color-primary);
+}
+
+.InputLabel {
+	padding-left: 1rem;
+}
+
+.Policy {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0 1rem;
+	gap: 1rem;
+}
+
+.PolicyLabel {
+	font-size: 1.6rem;
+	& > a {
+		display: block;
+	}
+}

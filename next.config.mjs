@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: [process.env.DOMAIN],
-		formats: ['image/avif', 'image/webp'],
+		remotePatterns: [
+			{
+				protocol: 'http',
+				hostname: 'qr.wedraft.ru',
+				port: '300',
+				pathname: '**',
+			},
+		],
 	},
 	env: {
 		domainUrl: process.env.DOMAIN,

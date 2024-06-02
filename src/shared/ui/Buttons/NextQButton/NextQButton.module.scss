@@ -1,0 +1,69 @@
+.PrimaryButton {
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	min-width: 80px;
+	height: 48px;
+	padding: 1.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	transition: transform 0.3s ease-out;
+	background-color: var(--color-primary);
+	border-radius: 4px;
+	overflow: hidden;
+	&:hover {
+		background-color: #b1833e;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		background: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			color-stop(10%, hsla(0, 0%, 100%, 0.1)),
+			color-stop(20%, hsla(0, 0%, 100%, 0.2)),
+			to(hsla(0, 0%, 100%, 0.6))
+		);
+		background: linear-gradient(
+			90deg,
+			hsla(0, 0%, 100%, 0.1) 10%,
+			hsla(0, 0%, 100%, 0.2) 20%,
+			hsla(0, 0%, 100%, 0.6)
+		);
+		width: 20px;
+		-webkit-transform: skewX(-45deg);
+		transform: skewX(-45deg);
+		left: -20%;
+		-webkit-transition: all 0.6s ease;
+		transition: all 0.6s ease;
+		-webkit-animation-name: blick;
+		animation-name: blick;
+		-webkit-animation-duration: 6s;
+		animation-duration: 6s;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+	}
+	@media only screen and (max-width: 17.5625rem) {
+		min-width: 236px;
+	}
+}
+.Text {
+	font-size: 1.8rem;
+	line-height: 1.3rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+@keyframes blick {
+	15%,
+	100% {
+		left: 110%;
+	}
+}

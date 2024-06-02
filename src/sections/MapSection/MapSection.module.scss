@@ -1,11 +1,39 @@
-.Map {
-	padding: 0 7rem !important;
+.Section {
+	padding: 9.6rem 0;
+	position: relative;
+}
+.Heading {
+	text-align: center;
+}
 
-	@media only screen and (max-width: 37.5rem) {
-		padding: 0 !important;
-	}
+.Notification {
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem;
+	max-width: 400px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 30px;
+	// right: -300px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	transition: all 0.5s;
+}
 
-	& > iframe {
-		border-radius: 10px;
-	}
+.NotificationActive {
+	right: 30px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.NotificationText {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.Icon {
+	width: 4.2rem;
+	height: 4.2rem;
 }

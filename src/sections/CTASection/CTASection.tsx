@@ -14,11 +14,9 @@ import PhoneInput from 'react-phone-input-2'
 import cls from './CTASection.module.scss'
 interface CustomProjectProps {
 	className?: string
-	heading: string
-	bg: string
 }
 
-export const CTASection = ({ className, heading, bg }: CustomProjectProps) => {
+export const CTASection = ({ className }: CustomProjectProps) => {
 	const { control, register, reset, handleSubmit } = useForm({
 		defaultValues: {
 			username: '',

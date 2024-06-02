@@ -1,4 +1,5 @@
 'use client'
+import { Headings } from '@/shared/ui/Layout/Headings/Headings'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import 'photoswipe/dist/photoswipe.css'
@@ -18,6 +19,7 @@ const GallerySection = () => {
 	const xBottom = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
 	return (
 		<section id='gallery' className={cls.Gallery}>
+			<Headings title='Удачные решения' className={cls.Heading} />
 			<Gallery>
 				<div className={cls.Container}>
 					<motion.div

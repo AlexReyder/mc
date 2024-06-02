@@ -11,14 +11,18 @@ export default function Paragraph({ paragraph }) {
 
 	const words = paragraph.split(' ')
 	return (
-		<p ref={container} className={cls.paragraph}>
+		<p ref={container} className={cls.paragraph} key={'asd2314s'}>
 			{words.map((word, i) => {
 				const start = i / words.length
 				const end = start + 1 / words.length
 				if (word === 'возможностям.') {
 					return (
 						<>
-							<Word key={i} progress={scrollYProgress} range={[start, end]}>
+							<Word
+								key={`ppprg${i}`}
+								progress={scrollYProgress}
+								range={[start, end]}
+							>
 								{word}
 							</Word>
 							<span className={cls.br}></span>
@@ -27,7 +31,11 @@ export default function Paragraph({ paragraph }) {
 				} else if (word === 'поверхности.') {
 					return (
 						<>
-							<Word key={i} progress={scrollYProgress} range={[start, end]}>
+							<Word
+								key={`pppsssrg${i}`}
+								progress={scrollYProgress}
+								range={[start, end]}
+							>
 								{word}
 							</Word>
 							<span className={cls.br}></span>
@@ -35,7 +43,11 @@ export default function Paragraph({ paragraph }) {
 					)
 				} else {
 					return (
-						<Word key={i} progress={scrollYProgress} range={[start, end]}>
+						<Word
+							key={`ppaaaprg${i}`}
+							progress={scrollYProgress}
+							range={[start, end]}
+						>
 							{word}
 						</Word>
 					)
@@ -63,7 +75,7 @@ const Word = ({ children, progress, range }) => {
 				const start = range[0] + i * step
 				const end = range[0] + (i + 1) * step
 				return (
-					<Char key={`c_${i}`} progress={progress} range={[start, end]}>
+					<Char key={`cthf_${i}`} progress={progress} range={[start, end]}>
 						{char}
 					</Char>
 				)

@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import cls from './PolicyCheckbox.module.scss'
-const PolicyCheckbox = ({ change }: any) => {
+
+interface PolicyCheckboxProps {
+	change?: any
+	className?: any
+}
+
+const PolicyCheckbox = ({ change, className }: PolicyCheckboxProps) => {
 	return (
 		<div className={cls.Container}>
 			<div className={cls.CheckboxWrapper}>
@@ -13,7 +19,7 @@ const PolicyCheckbox = ({ change }: any) => {
 				<label htmlFor='cbtest-20' className={cls.Label}></label>
 			</div>
 			<div>
-				<p className={cls.Policy}>
+				<p className={`cls.Policy ${className}`}>
 					Согласен(а) на обработку &nbsp;
 					<Link target='_blank' href='/policy'>
 						персональных данных

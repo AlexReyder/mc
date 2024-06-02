@@ -14,9 +14,9 @@ export const HeroSection = () => {
 	return (
 		<Section id='#hero' className={cls.Hero}>
 			<div className={cls.Touch}>
-				<h2 className={cls.Heading}>
+				<h1 className={cls.Heading}>
 					Полимерный микроцемент идеальный материал для отделки и дизайна
-				</h2>
+				</h1>
 				<PrimaryButton
 					className={cls.PrimaryButton}
 					text='Получить консультацию'
@@ -30,7 +30,6 @@ export const HeroSection = () => {
 				isOpen={isModalConsultOpen}
 				handleClose={handleModalClose}
 			/>
-			<div className={`swiper-pagination ${cls.Pagination}`}></div>
 		</Section>
 	)
 }

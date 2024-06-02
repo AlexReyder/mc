@@ -1,0 +1,125 @@
+.Start {
+	background-color: #222;
+	width: 100%;
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 12px;
+}
+
+// .Left {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: flex-start;
+// 	justify-content: flex-start;
+// 	gap: 2rem;
+// 	padding: 6rem 6rem;
+// 	height: 80vh;
+// 	width: 100%;
+// 	background-color: #222;
+// 	position: relative;
+// 	border-top-left-radius: 36px;
+// 	border-bottom-left-radius: 36px;
+
+// 	&::after {
+// 		content: '';
+// 		display: inline-block;
+// 		position: absolute;
+// 		top: 0;
+// 		right: -8rem;
+// 		width: 8rem;
+// 		height: 100%;
+// 		background: linear-gradient(
+// 			to bottom right,
+// 			#222 51%,
+// 			#222 50%,
+// 			transparent 52%,
+// 			transparent 100%
+// 		);
+// 		@media only screen and (max-width: 56.25rem) {
+// 			background: linear-gradient(
+// 				to bottom right,
+// 				#222 50%,
+// 				#222 49%,
+// 				transparent 50%,
+// 				transparent 100%
+// 			);
+// 			height: 15rem;
+// 			top: 100%;
+// 			right: 0;
+// 			width: 100%;
+// 		}
+// 	}
+// 	@media only screen and (max-width: 56.25rem) {
+// 		height: 50%;
+// 		width: 100%;
+// 		border-top-right-radius: 24px;
+// 		border-bottom-left-radius: 0;
+// 		align-items: center;
+// 		justify-content: flex-end;
+// 	}
+// }
+
+// .Right {
+// 	padding-left: 8rem;
+// 	padding-top: 6rem;
+// 	background-size: cover;
+// 	height: 100%;
+// 	width: 100%;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// 	gap: 1.5rem;
+// 	border-top-right-radius: 36px;
+// 	border-bottom-right-radius: 36px;
+// 	@media only screen and (max-width: 56.25rem) {
+// 		border-top-right-radius: 0;
+// 		border-bottom-left-radius: 24px;
+// 		padding-left: 0;
+// 	}
+// }
+.Wrapper {
+	max-width: 55%;
+	padding: 1rem 2rem;
+	margin: 0 auto;
+	text-align: center;
+	@media only screen and (max-width: 37.5rem) {
+		max-width: 100%;
+	}
+}
+.Heading {
+	color: #fff;
+	font-size: 2.6rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+.Subheading {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+.BonusWrapper {
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.BonusText {
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.BonusContainer {
+	margin-top: 2rem;
+	display: flex;
+	gap: 2rem;
+	@media only screen and (max-width: 30rem) {
+		flex-direction: column;
+	}
+}
