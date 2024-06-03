@@ -20,7 +20,7 @@ export default function LoginAdmin() {
 	const [resetPassFailAlert, setResetPassFailAlert] = useState(false)
 
 	const router = useRouter()
-	const handleSubmit = event => {
+	const handleSubmit = (event: any) => {
 		event.preventDefault()
 		const data = new FormData(event.currentTarget)
 
@@ -32,9 +32,9 @@ export default function LoginAdmin() {
 			})
 			.then(res => {
 				if (res.data) {
-					setCookie('isAuthenticated', true, { maxAge: 60 * 6 * 24 })
+					setCookie('isAuthenticated', true, { maxAge: 60 * 6 * 24 * 365 })
 					setAuthError(false)
-					window.location.href = '/admin/add'
+					window.location.href = '/admin/walls'
 				} else {
 					// localStorage.setItem('isAuthenticated', 'false')
 					setAuthError(true)

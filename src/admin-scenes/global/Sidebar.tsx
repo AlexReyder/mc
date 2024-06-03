@@ -165,8 +165,8 @@ const SidebarEl = () => {
 						/>
 
 						<Item
-							title='Профиль'
-							to='/admin/profile'
+							title='Квиз'
+							to='/admin/quiz'
 							icon={<VpnKeyIcon />}
 							selected={selected}
 							setSelected={setSelected}
