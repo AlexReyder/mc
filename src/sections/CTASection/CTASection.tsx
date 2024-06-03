@@ -17,30 +17,36 @@ interface CustomProjectProps {
 }
 
 export const CTASection = ({ className }: CustomProjectProps) => {
-	const { control, register, reset, handleSubmit } = useForm({
+	const { control, register, handleSubmit } = useForm({
 		defaultValues: {
 			username: '',
 			phone: '',
 			square: '',
 			question: '',
-			theme: 'Консультация',
 		},
 	})
 
 	const [isPolicy, setIsPolicy] = useState(true)
+	const [isPolicyErr, setIsPolicyErr] = useState(false)
 
 	const router = useRouter()
 
 	const onSubmit = (data: any) => {
 		if (isPolicy) {
 			axios
-				.post(`${process.env.domainUrl}/api/mail`, data)
+				.post(`${process.env.domainUrl}/api/mail/cta`, data, {
+					headers: {
+						'Content-Type': 'multipart/form-data',
+					},
+				})
 				.then(res => {
-					reset()
-					setIsSend('Отправлено')
+					setIsPolicyErr(false)
+					router.push('/spasibo')
 				})
 				// .then(response => router.push('/spasibo'))
 				.catch(e => console.log(e))
+		} else {
+			setIsPolicyErr(true)
 		}
 	}
 
@@ -83,7 +89,7 @@ export const CTASection = ({ className }: CustomProjectProps) => {
 									Номер телефона *
 								</label>
 								<Controller
-									name='ctaphone'
+									name='phone'
 									control={control}
 									render={({ field }) => (
 										<PhoneInput
@@ -120,7 +126,7 @@ export const CTASection = ({ className }: CustomProjectProps) => {
 									Уточнения
 								</label>
 								<Controller
-									name='square'
+									name='question'
 									control={control}
 									render={({ field }) => (
 										<ModalInput
@@ -132,7 +138,11 @@ export const CTASection = ({ className }: CustomProjectProps) => {
 								/>
 							</div>
 							<PolicyCheckbox change={handlePolicyChange} />
-							<div className={cls.Submit}></div>
+							{!isPolicyErr ? null : (
+								<p style={{ fontSize: '14px', color: 'red' }}>
+									Подтвердите согласие на обработку персональных данных
+								</p>
+							)}
 							<PrimaryButton text='Отправить' type='submit' />
 						</form>
 					</div>

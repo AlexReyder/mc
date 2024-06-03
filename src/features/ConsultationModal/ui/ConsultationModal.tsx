@@ -2,8 +2,10 @@
 import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton/PrimaryButton'
 import { ModalInput } from '@/shared/ui/Inputs/ModalInput/ModalInput'
 import { Modal } from '@/shared/ui/Modal'
+import PolicyCheckbox from '@/shared/ui/PolicyCheckbox/PolicyCheckbox'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
 import cls from './ConsultationModal.module.scss'
@@ -23,18 +25,28 @@ export const ConsultationModal = ({
 			phone: '',
 		},
 	})
+	const [isPolicy, setIsPolicy] = useState(true)
+	const [isPolicyErr, setIsPolicyErr] = useState(false)
 	const router = useRouter()
 	const onSubmit = (data: any) => {
-		axios
-			.post(`${process.env.domainUrl}/api/mail`, data, {
-				headers: {
-					'Content-Type': 'multipart/form-data',
-				},
-			})
-			.then(res => {
-				reset()
-				router.push('/spasibo')
-			})
+		if (isPolicy) {
+			axios
+				.post(`${process.env.domainUrl}/api/mail/consultModal`, data, {
+					headers: {
+						'Content-Type': 'multipart/form-data',
+					},
+				})
+				.then(res => {
+					setIsPolicyErr(false)
+					router.push('/spasibo')
+				})
+		} else {
+			setIsPolicyErr(true)
+		}
+	}
+
+	const handlePolicyChange = () => {
+		setIsPolicy(!isPolicy)
 	}
 
 	return (
@@ -76,16 +88,17 @@ export const ConsultationModal = ({
 						)}
 					/>
 
+					<PolicyCheckbox change={handlePolicyChange} />
+					{!isPolicyErr ? null : (
+						<p style={{ fontSize: '14px', color: 'red' }}>
+							Подтвердите согласие на обработку персональных данных
+						</p>
+					)}
 					<PrimaryButton type='submit' text='Отправить заявку' />
 				</form>
 			</div>
 		</Modal>
 	)
-}
-
-interface ConsultaionHeadingProps {
-	heading: string | ReactNode
-	subheading: string | ReactNode
 }
 
 export const ConsultaionHeading = () => {

@@ -59,6 +59,7 @@
 }
 
 .Body {
+	width: 100%;
 	text-align: left;
 	padding: 4rem 4rem 1rem 4rem;
 }
@@ -126,13 +127,36 @@
 }
 
 .BonusText {
+	text-align: center;
 	@media only screen and (max-width: 26.25rem) {
-		display: none;
+		// display: none;
+	}
+}
+.Bonus {
+	width: 75% !important;
+	height: 95px !important;
+	@media only screen and (max-width: 90rem) {
+		height: 80px !important;
+	}
+
+	@media only screen and (max-width: 37.5rem) {
+		width: 100% !important;
+		height: 70px !important;
+	}
+}
+.BonusTextClass {
+	font-size: 2rem !important;
+	@media only screen and (max-width: 90rem) {
+		font-size: 1.6rem !important;
+	}
+	@media only screen and (max-width: 37.5rem) {
+		font-size: 1.4rem !important;
 	}
 }
 
 .BonusContainer {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
 	margin-top: 2rem;
@@ -140,7 +164,7 @@
 		justify-content: center;
 	}
 	@media only screen and (max-width: 26.25rem) {
-		display: none;
+		// display: none;
 	}
 }
 

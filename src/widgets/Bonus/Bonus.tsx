@@ -2,11 +2,12 @@ import cls from './Bonus.module.scss'
 
 interface BonusInt {
 	className?: string
+	textClass?: string
 	img: string
 	description: string
 }
 
-const Bonus = ({ img, description, className }: BonusInt) => {
+const Bonus = ({ img, description, className, textClass = '' }: BonusInt) => {
 	return (
 		<div className={`${cls.Bonus} ${className}`}>
 			<div
@@ -16,7 +17,7 @@ const Bonus = ({ img, description, className }: BonusInt) => {
 				}}
 			>
 				<div className={cls.BonusLayer}></div>
-				<p className={cls.BonusDescription}>{description}</p>
+				<p className={`${cls.BonusDescription} ${textClass}`}>{description}</p>
 			</div>
 			<div className={cls.BonusLock}>
 				<svg viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'>

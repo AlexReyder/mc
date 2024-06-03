@@ -1,8 +1,15 @@
 'use client'
 import isAuth from '@/admin-scenes/isAuth '
-import AdminProducts from '@/admin-scenes/product/AdminProducts'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 const Add = () => {
-	return <AdminProducts />
+	const router = useRouter()
+
+	useEffect(() => {
+		router.push('/admin/walls')
+	}, [])
+
+	return <></>
 }
 
 export default isAuth(Add)

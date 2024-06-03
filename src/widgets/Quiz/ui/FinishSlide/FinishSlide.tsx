@@ -4,8 +4,11 @@ import cls from './FinishSlide.module.scss'
 import { PrimaryButton } from '@/shared/ui/Buttons/PrimaryButton/PrimaryButton'
 import Bonus from '@/widgets/Bonus/Bonus'
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import PhoneInput from 'react-phone-input-2'
+
 interface FinishSlideProps {
 	className?: string
 	answers: any
@@ -18,43 +21,59 @@ export const FinishSlide = ({ className, answers }: FinishSlideProps) => {
 			phone: '',
 		},
 	})
+	const [isPolicy, setIsPolicy] = useState(true)
+	const [isPolicyErr, setIsPolicyErr] = useState(false)
+	const router = useRouter()
+
+	const handlePolicyChange = () => {
+		setIsPolicy(!isPolicy)
+	}
 
 	const onSubmit = (data: any) => {
-		const output = {
-			...data,
-			...answers,
+		console.log(answers)
+		const formDt = new FormData()
+		formDt.append('username', data.username)
+		formDt.append('phone', data.phone)
+		formDt.append('quiz', JSON.stringify(answers))
+		if (isPolicy) {
+			axios
+				.post(`${process.env.domainUrl}/api/mail/quiz`, formDt, {
+					headers: {
+						'Content-Type': 'multipart/form-data',
+					},
+				})
+				.then(response => {
+					setIsPolicyErr(false)
+					router.push('/spasibo-quiz')
+				})
+		} else {
+			setIsPolicyErr(true)
 		}
-		console.log(output)
-		axios
-			.post('/calc-quiz', JSON.stringify(output))
-			.then(
-				response =>
-					(window.parent.location.href =
-						'https://simter-st.ru/spasibo-marquiz/')
-			)
 	}
 
 	return (
 		<div className={`${className} ${cls.Finish}`}>
 			<div className={cls.Left}>
 				<div className={cls.Body}>
-					<div className={cls.Header}>
+					{/* <div className={cls.Header}>
 						<p className={cls.Title}>
 							Напишите свой контактный номер телефона, мы вышлем вам почтой
 							образцы нашей продукции бесплатно
 						</p>
-					</div>
+					</div> */}
 					<p className={`${cls.BText} ${cls.BonusText}`}>Ваши бонусы</p>
 					<div className={cls.BonusContainer}>
 						<Bonus
 							img='/img/quiz/bonus1.png'
 							description='Скачать презентацию'
 							className={cls.Bonus}
+							textClass={cls.BonusTextClass}
 						/>
 						<Bonus
 							img='/img/quiz/bonus2.png'
 							description='Скидка до 10%'
 							className={cls.Bonus}
+							textClass={cls.BonusTextClass}
 						/>
 					</div>
 				</div>
@@ -122,7 +141,12 @@ export const FinishSlide = ({ className, answers }: FinishSlideProps) => {
 							)}
 						/>
 					</div>
-					<PolicyCheckbox className={cls.Policy} />
+					<PolicyCheckbox className={cls.Policy} change={handlePolicyChange} />
+					{!isPolicyErr ? null : (
+						<p style={{ fontSize: '14px', color: 'red', marginBottom: '10px' }}>
+							Подтвердите согласие на обработку персональных данных
+						</p>
+					)}
 					<PrimaryButton
 						text='Получить каталог, подарки и скидку'
 						type='submit'

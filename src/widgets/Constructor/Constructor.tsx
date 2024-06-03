@@ -49,7 +49,7 @@ const Constructor = ({ startFilter }: ConstructorProps) => {
 		}
 	}
 	return (
-		<figure ref={refContainer}>
+		<figure ref={refContainer} className={cls.Constructor}>
 			{filtredData.length > 0 ? (
 				<div className={cls.DesignMain}>
 					<div className={cls.FiltersWrapperPhone}>
