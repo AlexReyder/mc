@@ -83,7 +83,7 @@ const ConstructorSection = () => {
 							<div className={cls.CardWrapper}>
 								<div className={cls.Overlay}></div>
 								<Image
-									src='/img/constructor/wall.jpg'
+									src='/img/constructor/wet.jpg'
 									alt='Стены'
 									fill
 									style={{ objectFit: 'cover' }}

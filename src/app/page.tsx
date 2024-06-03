@@ -9,9 +9,12 @@ import ProductTextSection from '@/sections/ProductTextSection/ProductTextSection
 import QuizSection from '@/sections/QuizSection/QuizSection'
 import ReasonSection from '@/sections/ReasonSection/ReasonSection'
 import UsageSection from '@/sections/UsageSection/UsageSection'
+import { Footer } from '@/widgets/Footer'
+import { Header } from '@/widgets/Header'
 export default function Home() {
 	return (
 		<main>
+			<Header />
 			<HeroSection />
 			<ProductTextSection />
 			<UsageSection />
@@ -23,6 +26,7 @@ export default function Home() {
 			<GallerySection />
 			<ReasonSection />
 			<CTASection />
+			<Footer />
 		</main>
 	)
 }

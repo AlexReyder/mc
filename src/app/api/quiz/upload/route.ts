@@ -19,6 +19,7 @@ export async function POST(request: Request) {
 
 	const fileNameExtOrg = path.extname(file.name)
 	const fileName = 'presentation' + fileNameExtOrg
+	console.log(fileName)
 
 	const pathToSave = directoryPathGeneral + fileName
 
@@ -27,9 +28,5 @@ export async function POST(request: Request) {
 
 	writeFile(pathToSave, bufferFile)
 
-	const res = {
-		download: pathToSave,
-	}
-
-	return NextResponse.json(res)
+	return NextResponse.json(true)
 }

@@ -22,7 +22,12 @@ export async function POST(request: Request) {
 		})
 	}
 
-	let result = JSON.stringify(orderItems)
+	const AllProductsJSON = fs.readFileSync('public/data/products.json', 'utf-8')
+	const products = JSON.parse(AllProductsJSON)
+
+	const goodData = products.filter(el => el.type !== orderItems[0].type)
+	const good = goodData.concat(orderItems)
+	let result = JSON.stringify(good)
 
 	fs.writeFileSync('public/data/products.json', result)
 

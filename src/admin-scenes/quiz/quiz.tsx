@@ -27,7 +27,7 @@ const QuizAdm = () => {
 		setStatus('loading')
 
 		axios
-			.post('api/quiz/upload', formData, {
+			.post('/api/quiz/upload', formData, {
 				headers: {
 					'Content-Type': 'multipart/form-data',
 				},
