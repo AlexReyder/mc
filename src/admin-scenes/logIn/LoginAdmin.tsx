@@ -25,7 +25,7 @@ export default function LoginAdmin() {
 		const data = new FormData(event.currentTarget)
 
 		axios
-			.post('/api/auth/login', data, {
+			.post(`${process.env.domainUrl}/api/auth/login`, data, {
 				headers: {
 					'Content-Type': 'multipart/form-data',
 				},

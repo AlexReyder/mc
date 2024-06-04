@@ -14,9 +14,10 @@ const GallerySection = () => {
 	})
 	const { scrollY } = useScroll()
 
-	const xTop = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
-	const xCenter = useTransform(scrollYProgress, [1, -1], ['20%', '-95%'])
-	const xBottom = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
+	const x = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
+	// const xTop = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
+	// const xCenter = useTransform(scrollYProgress, [1, -1], ['20%', '-95%'])
+	// const xBottom = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
 	return (
 		<section id='gallery' className={cls.Gallery}>
 			<Headings title='Удачные решения' className={cls.Heading} />
@@ -24,7 +25,7 @@ const GallerySection = () => {
 				<div className={cls.Container}>
 					<motion.div
 						initial={{ x: '-300px' }}
-						style={{ x: xTop }}
+						style={{ x }}
 						className={cls.Row}
 						id='gallery-top'
 						ref={targetRef}
@@ -151,8 +152,8 @@ const GallerySection = () => {
 						</div>
 					</motion.div>
 					<motion.div
-						initial={{ x: '300px' }}
-						style={{ x: xCenter }}
+						initial={{ x: '-300px' }}
+						style={{ x }}
 						className={cls.Row}
 						id='gallery-top'
 					>
@@ -279,7 +280,7 @@ const GallerySection = () => {
 					</motion.div>
 					<motion.div
 						initial={{ x: '-300px' }}
-						style={{ x: xBottom }}
+						style={{ x }}
 						className={cls.Row}
 						id='gallery-top'
 					>
