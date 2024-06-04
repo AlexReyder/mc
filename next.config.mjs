@@ -3,9 +3,9 @@ const nextConfig = {
 	images: {
 		remotePatterns: [
 			{
-				protocol: 'http',
-				hostname: 'qr.wedraft.ru',
-				port: '300',
+				protocol: 'https',
+				hostname: 'https://simter-mc.ru/',
+				port: '',
 				pathname: '**',
 			},
 		],
