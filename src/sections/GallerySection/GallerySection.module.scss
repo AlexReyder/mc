@@ -10,11 +10,12 @@
 .Row {
 	display: flex;
 	gap: 2rem;
-	height: 30vh;
+	height: calc(100vh / 3 - var(--font-size-section-heading) - 4rem);
 	padding-top: 3rem;
-	transition: all 1s;
+	transition: all 0.5s;
 
 	@media only screen and (max-width: 42rem) {
+		height: 25vh;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		align-items: center;

@@ -7,7 +7,7 @@ import cls from './AdvantagesSection.module.scss'
 
 export const AdvantagesSection = () => {
 	return (
-		<Section id='#advantages' className={cls.Section}>
+		<Section id='advantages' className={cls.Section}>
 			<Container className={cls.Container}>
 				<Headings title='Свойства микроцемента' color='w' />
 				<ul className={cls.List}>

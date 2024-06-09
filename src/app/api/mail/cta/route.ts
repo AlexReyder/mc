@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 	const mailOptions = {
 		from: process.env.emailUser,
 		to: process.env.emailUser,
-		subject: 'TEST MC',
+		subject: 'Полимерный микроцемент заявка',
 		text: message,
 	}
 

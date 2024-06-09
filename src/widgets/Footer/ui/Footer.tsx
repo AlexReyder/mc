@@ -1,11 +1,10 @@
 import { Container } from '@/shared/ui/Layout/Container/Container'
-import Image from 'next/image'
 import Link from 'next/link'
 import cls from './Footer.module.scss'
 
 export const Footer = () => {
 	return (
-		<footer className={cls.Footer}>
+		<footer className={cls.Footer} id='contacts'>
 			<Container className={cls.Wrapper}>
 				<div className={`${cls.Contacts__entity} ${cls.Entity_1}`}>
 					<p className={cls.Title}>Электронная почта</p>
@@ -24,10 +23,15 @@ export const Footer = () => {
 					<a
 						href='https://wa.me/79950322214?text='
 						className={`${cls.Messanger} link`}
+						target='_blank'
 					>
 						Whatsapp
 					</a>
-					<a href='https://t.me/simter_rf' className={`${cls.Messanger} link`}>
+					<a
+						href='https://t.me/Simter1'
+						className={`${cls.Messanger} link`}
+						target='_blank'
+					>
 						Telegram
 					</a>
 				</div>
@@ -45,13 +49,11 @@ export const Footer = () => {
 					<p className={cls.Title}>Реквизиты</p>
 					<p className={cls.Business}>ООО «СИМТЕР»</p>
 					<p className={cls.Business}>ИНН 5040172862</p>
-					<p className={cls.Business}>ИП Перепелова В. А.</p>
-					<p className={cls.Business}>ИНН 301302986767</p>
 				</div>
 			</Container>
 			<p className={cls.Copyright}>2024 © ООО «СИМТЕР»</p>
 			<Link href='#' className={cls.Top}>
-				<Image
+				<img
 					src='img/icons/top.svg'
 					alt='Подняться наверх'
 					width={19}

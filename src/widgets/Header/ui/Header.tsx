@@ -43,7 +43,7 @@ export const Header = () => {
 					/>
 					<MessangerLink
 						icon={<TelegramIcon className={cls.Icon} />}
-						to='https://t.me/simter_rf'
+						to='https://t.me/Simter1'
 					/>
 					<p className={cls.More}>(Звоните и пишите)</p>
 				</div>

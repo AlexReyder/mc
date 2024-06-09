@@ -7,6 +7,7 @@ import {
 	Container,
 	FormControlLabel,
 	Grid,
+	Link,
 	TextField,
 	Typography,
 } from '@mui/material'
@@ -17,9 +18,13 @@ import { useState } from 'react'
 export default function LoginAdmin() {
 	const [authError, setAuthError] = useState(false)
 	const [resetPassAlert, setResetPassAlert] = useState(false)
+	const [checkedRemember, setCheckedRemember] = useState(false)
 	const [resetPassFailAlert, setResetPassFailAlert] = useState(false)
 
 	const router = useRouter()
+	const handleChangeRemember = (event: any) => {
+		setCheckedRemember(event.target.checked)
+	}
 	const handleSubmit = (event: any) => {
 		event.preventDefault()
 		const data = new FormData(event.currentTarget)
@@ -32,13 +37,28 @@ export default function LoginAdmin() {
 			})
 			.then(res => {
 				if (res.data) {
-					setCookie('isAuthenticated', true, { maxAge: 60 * 6 * 24 * 365 })
+					if (checkedRemember) {
+						setCookie('isAuthenticated', true, { maxAge: 60 * 6 * 24 * 365 })
+					} else {
+						setCookie('isAuthenticated', true, { maxAge: 60 * 6 * 24 })
+					}
 					setAuthError(false)
 					window.location.href = '/admin/walls'
 				} else {
 					// localStorage.setItem('isAuthenticated', 'false')
 					setAuthError(true)
 				}
+			})
+	}
+	const handleResetPassword = (event: any) => {
+		event.preventDefault()
+		axios(`${process.env.domainUrl}/api/auth/resetpass`)
+			.then(res => {
+				setResetPassAlert(true)
+			})
+			.catch(e => {
+				console.log(e)
+				setResetPassFailAlert(true)
 			})
 	}
 
@@ -79,7 +99,8 @@ export default function LoginAdmin() {
 					<FormControlLabel
 						control={
 							<Checkbox
-								value='remember'
+								checked={checkedRemember}
+								onChange={handleChangeRemember}
 								color='primary'
 								id='remember'
 								name='remember'
@@ -96,7 +117,11 @@ export default function LoginAdmin() {
 						Войти
 					</Button>
 					<Grid container>
-						<Grid item xs></Grid>
+						<Grid item xs>
+							<Link href='#' variant='body2' onClick={handleResetPassword}>
+								Забыл пароль?
+							</Link>
+						</Grid>
 					</Grid>
 				</Box>
 			</Box>

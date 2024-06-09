@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 		},
 	})
 
-	const md5pass = md5(md5(pass))
+	const md5pass = md5(pass)
 
 	if (userDb?.user_login === user && userDb.user_password === md5pass) {
 		return NextResponse.json(true)

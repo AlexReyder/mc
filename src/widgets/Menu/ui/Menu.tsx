@@ -14,11 +14,11 @@ export const Menu = ({ className }: MenuProps) => {
 	const [menu, toggleMenu] = useState(false)
 
 	const onToggle = () => {
-		if (!menu) {
-			// document.body.style.overflow = 'hidden'
-		} else {
-			// document.body.style.overflow = ''
-		}
+		// if (!menu) {
+		// 	// document.body.style.overflow = 'hidden'
+		// } else {
+		// 	// document.body.style.overflow = ''
+		// }
 		toggleMenu(!menu)
 	}
 
@@ -36,13 +36,19 @@ export const Menu = ({ className }: MenuProps) => {
 				<div className='nav__content'>
 					<ul className='nav__list'>
 						<li className='nav__list-item'>
-							<Link href='/#usage'>Область применения</Link>
+							<Link href='/#usage' onClick={onToggle}>
+								Область применения
+							</Link>
 						</li>
 						<li className='nav__list-item'>
-							<Link href='/#advantages'>Свойства</Link>
+							<Link href='/#advantages' onClick={onToggle}>
+								Свойства
+							</Link>
 						</li>
 						<li className='nav__list-item'>
-							<Link href='/#colors'>Палитра</Link>
+							<Link href='/#colors' onClick={onToggle}>
+								Палитра
+							</Link>
 						</li>
 						<li className='nav__list-item'>
 							<Link href='/#properties' onClick={onToggle}>
@@ -67,7 +73,7 @@ export const Menu = ({ className }: MenuProps) => {
 								icon={<WhatsAppIcon className='nav__list-icon' />}
 							/>
 							<MessangerLink
-								to='https://t.me/simter_rf'
+								to='https://t.me/Simter1'
 								className='f-c'
 								icon={<TelegramIcon className='nav__list-icon' />}
 							/>

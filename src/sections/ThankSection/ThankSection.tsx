@@ -37,23 +37,32 @@ const ThankSection = ({
 						<span>Страница не найдена.</span>
 					</h1>
 				)}
-
-				{download ? (
-					<Link
-						className={cls.Link}
-						href={link}
-						target='_blank'
-						download={true}
-					>
-						{titleLink}
-					</Link>
-				) : (
-					<LinkDefault
-						className={cls.PrimaryButton}
-						text={titleLink}
-						to={link}
-					/>
-				)}
+				<div className={cls.ButtonContainer}>
+					{download ? (
+						<>
+							<Link
+								className={cls.PrimaryButton}
+								href={link}
+								target='_blank'
+								download={true}
+								style={{ display: 'inline-flex', marginBottom: '2rem' }}
+							>
+								{titleLink}
+							</Link>
+							<LinkDefault
+								className={cls.PrimaryButton}
+								text='Вернуться на главную'
+								to='/'
+							/>
+						</>
+					) : (
+						<LinkDefault
+							className={cls.PrimaryButton}
+							text={titleLink}
+							to={link}
+						/>
+					)}
+				</div>
 			</div>
 			<HeroSlider />
 		</Section>

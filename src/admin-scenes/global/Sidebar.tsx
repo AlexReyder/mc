@@ -2,20 +2,21 @@
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize'
 import LogoutIcon from '@mui/icons-material/Logout'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
+import QuizIcon from '@mui/icons-material/Quiz'
 import VpnKeyIcon from '@mui/icons-material/VpnKey'
 import { Box, IconButton, Typography } from '@mui/material'
-import axios from 'axios'
+import { setCookie } from 'cookies-next'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ReactNode, useState } from 'react'
 import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar'
 import { colors } from '../theme'
-
-import Link from 'next/link'
 import './sidebar.css'
 
 interface ItemPropsI {
 	ftg: any
 	title: string
-	to: string
+	to: string | null
 	icon: ReactNode
 	selected: string
 	setSelected: (title: any) => void
@@ -31,7 +32,7 @@ const Item = ({ title, to, icon, selected, ftg, setSelected }: ItemPropsI) => {
 				ftg()
 			}}
 			icon={icon}
-			component={<Link href={to} />}
+			component={to !== null ? <Link href={to} /> : undefined}
 		>
 			<Typography variant='h5'>{title}</Typography>
 		</MenuItem>
@@ -46,14 +47,15 @@ const SidebarEl = () => {
 	)
 	const [toggled, setToggled] = useState(false)
 
+	const router = useRouter()
+
 	const handleCloseToggle = () => {
 		setToggled(false)
 	}
 
 	const handleLogOut = () => {
-		axios('/auth/logout').then(res => {
-			window.location.replace('https://simter-st.ru/')
-		})
+		setCookie('isAuthenticated', false, { maxAge: 0 })
+		router.push('/')
 	}
 
 	return (
@@ -167,6 +169,14 @@ const SidebarEl = () => {
 						<Item
 							title='Квиз'
 							to='/admin/quiz'
+							icon={<QuizIcon />}
+							selected={selected}
+							setSelected={setSelected}
+							ftg={handleCloseToggle}
+						/>
+						<Item
+							title='Профиль'
+							to='/admin/profile'
 							icon={<VpnKeyIcon />}
 							selected={selected}
 							setSelected={setSelected}
@@ -175,11 +185,11 @@ const SidebarEl = () => {
 
 						<Item
 							title='Выйти из панели'
-							to='/'
+							to={null}
 							icon={<LogoutIcon />}
 							selected={selected}
 							setSelected={setSelected}
-							ftg={handleCloseToggle}
+							ftg={handleLogOut}
 						/>
 					</Box>
 				</Menu>

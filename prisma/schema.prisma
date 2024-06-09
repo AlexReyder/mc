@@ -8,9 +8,9 @@ datasource db {
 }
 
 model users {
-  user_id       Int    @id @default(autoincrement()) @db.UnsignedInt
+  user_id       Int    @unique(map: "user_id")
   user_login    String @db.VarChar(30)
   user_password String @db.VarChar(32)
-  user_hash     String @default("") @db.VarChar(32)
+  user_hash     String @db.VarChar(32)
   user_email    String @db.Text
 }
