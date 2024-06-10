@@ -54,7 +54,10 @@ const ConstructorSection = () => {
 									fill
 									style={{ objectFit: 'cover' }}
 								/>
-								<h3 className={cls.Title}>Открыть</h3>
+								<h3 className={cls.Title}>
+									<span>Открыть</span>
+									<span>палитру</span>
+								</h3>
 							</div>
 
 							<p className={cls.Head}>Стены</p>
@@ -71,7 +74,11 @@ const ConstructorSection = () => {
 									fill
 									style={{ objectFit: 'cover' }}
 								/>
-								<h3 className={cls.Title}>Открыть</h3>
+								<h3 className={cls.Title}>
+									{' '}
+									<span>Открыть</span>
+									<span>палитру</span>
+								</h3>
 							</div>
 
 							<p className={cls.Head}>Полы</p>
@@ -88,7 +95,11 @@ const ConstructorSection = () => {
 									fill
 									style={{ objectFit: 'cover' }}
 								/>
-								<h3 className={cls.Title}>Открыть</h3>
+								<h3 className={cls.Title}>
+									{' '}
+									<span>Открыть</span>
+									<span>палитру</span>
+								</h3>
 							</div>
 
 							<p className={cls.Head}>Мокрые зоны</p>

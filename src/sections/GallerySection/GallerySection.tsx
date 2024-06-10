@@ -14,9 +14,8 @@ const GallerySection = () => {
 	})
 	const { scrollY } = useScroll()
 
-	const x = window.matchMedia('(min-width: 900px)')
-		? useTransform(scrollYProgress, [-1, 1], ['95%', '-60%'])
-		: useTransform(scrollYProgress, [-1, 1], ['95%', '0%'])
+	const x = useTransform(scrollYProgress, [-1, 1], ['95%', '-60%'])
+
 	// const xTop = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
 	// const xCenter = useTransform(scrollYProgress, [1, -1], ['20%', '-95%'])
 	// const xBottom = useTransform(scrollYProgress, [-1, 1], ['95%', '-95%'])
